@@ -13,6 +13,7 @@
 		38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38580F9221C3A002007102F0 /* FitzAndHuxley.xcdatamodeld */; };
 		38580F9621C3A003007102F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38580F9521C3A003007102F0 /* Assets.xcassets */; };
 		38580F9921C3A003007102F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38580F9721C3A003007102F0 /* LaunchScreen.storyboard */; };
+		38580FA121C3A114007102F0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FA021C3A114007102F0 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		38580F9521C3A003007102F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38580F9821C3A003007102F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38580F9A21C3A003007102F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38580FA021C3A114007102F0 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				38580F9721C3A003007102F0 /* LaunchScreen.storyboard */,
 				38580F9A21C3A003007102F0 /* Info.plist */,
 				38580F9221C3A002007102F0 /* FitzAndHuxley.xcdatamodeld */,
+				38580FA021C3A114007102F0 /* PersistenceService.swift */,
 			);
 			path = FitzAndHuxley;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38580F8E21C3A002007102F0 /* ViewController.swift in Sources */,
+				38580FA121C3A114007102F0 /* PersistenceService.swift in Sources */,
 				38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */,
 				38580F8C21C3A002007102F0 /* AppDelegate.swift in Sources */,
 			);
