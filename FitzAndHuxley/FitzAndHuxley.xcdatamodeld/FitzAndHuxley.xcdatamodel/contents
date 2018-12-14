@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G2208" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EntityKonto" representedClassName="EntityKonto" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kreditkarteCvv" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kreditkarteDatum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kreditkarteInhaber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="kreditkarteNummer" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lieferPostleitzahl" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lieferStadt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lieferStrasse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lieferStrassenNr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nachname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passwort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rechnungPostleitzahl" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rechnungStadt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rechnungStrasse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rechnungStrassenNr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vorname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EntityKonto" positionX="-63" positionY="-18" width="128" height="285"/>
+    </elements>
 </model>
