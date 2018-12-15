@@ -104,7 +104,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l86-X8-XMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="341"/>
+            <point key="canvasLocation" x="1367" y="1163"/>
+        </scene>
+        <!--Category Table View Controller-->
+        <scene sceneID="nrh-z8-d6Y">
+            <objects>
+                <tableViewController id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwl-S2-iOt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="90" id="Cfl-YE-tYF" customClass="CategoryTableViewCell" customModule="FitzAndHuxley" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cfl-YE-tYF" id="ubi-rO-XJ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-Fj-yKO">
+                                            <rect key="frame" x="12" y="-0.5" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="Nbv-cn-81W"/>
+                                                <constraint firstAttribute="width" constant="90" id="ZhX-lb-WSU"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBD-ed-ZS8">
+                                            <rect key="frame" x="122" y="31" width="192" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FBD-ed-ZS8" firstAttribute="leading" secondItem="F0G-Fj-yKO" secondAttribute="trailing" constant="20" id="7bA-5E-0UU"/>
+                                        <constraint firstItem="FBD-ed-ZS8" firstAttribute="top" secondItem="ubi-rO-XJ6" secondAttribute="topMargin" constant="20" id="7xf-8b-uyR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FBD-ed-ZS8" secondAttribute="bottom" constant="20" id="BGZ-oD-lrC"/>
+                                        <constraint firstItem="FBD-ed-ZS8" firstAttribute="trailing" secondItem="ubi-rO-XJ6" secondAttribute="trailingMargin" constant="10" id="LFR-SQ-dyZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="F0G-Fj-yKO" secondAttribute="bottom" id="dIi-dY-o3p"/>
+                                        <constraint firstItem="FBD-ed-ZS8" firstAttribute="leading" secondItem="F0G-Fj-yKO" secondAttribute="trailing" constant="20" id="jcT-Me-tkf"/>
+                                        <constraint firstItem="F0G-Fj-yKO" firstAttribute="leading" secondItem="ubi-rO-XJ6" secondAttribute="leading" constant="12" id="to8-LQ-GnN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryNameLabel" destination="FBD-ed-ZS8" id="5sj-mq-KTX"/>
+                                    <outlet property="categoryNameLabelOutlet" destination="FBD-ed-ZS8" id="r9l-KB-B8L"/>
+                                    <outlet property="categoryPhotoImageView" destination="F0G-Fj-yKO" id="bhe-MN-DML"/>
+                                    <outlet property="categoryPhotoImageViewOutlet" destination="F0G-Fj-yKO" id="FKA-XS-9bz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x2n-Tb-yhe" id="abY-7U-3s7"/>
+                            <outlet property="delegate" destination="x2n-Tb-yhe" id="RbG-ku-5rO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366.875" y="355.98591549295776"/>
         </scene>
         <!--Item-->
         <scene sceneID="Pvh-TE-Xbe">
@@ -181,7 +239,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
 </document>
