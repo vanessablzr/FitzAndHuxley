@@ -110,7 +110,7 @@
         <scene sceneID="nrh-z8-d6Y">
             <objects>
                 <tableViewController id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwl-S2-iOt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwl-S2-iOt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,10 +147,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="categoryNameLabel" destination="FBD-ed-ZS8" id="5sj-mq-KTX"/>
-                                    <outlet property="categoryNameLabelOutlet" destination="FBD-ed-ZS8" id="r9l-KB-B8L"/>
-                                    <outlet property="categoryPhotoImageView" destination="F0G-Fj-yKO" id="bhe-MN-DML"/>
-                                    <outlet property="categoryPhotoImageViewOutlet" destination="F0G-Fj-yKO" id="FKA-XS-9bz"/>
+                                    <outlet property="categoryNameLabel" destination="FBD-ed-ZS8" id="npj-QW-AhK"/>
+                                    <outlet property="categoryPhotoImage" destination="F0G-Fj-yKO" id="zIf-pn-bop"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
