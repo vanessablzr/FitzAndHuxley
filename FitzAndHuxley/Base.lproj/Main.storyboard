@@ -209,7 +209,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pressAnmelden:" destination="yAn-58-38Y" eventType="touchUpInside" id="iTh-gT-hPs"/>
+                                    <segue destination="bY1-bq-8v4" kind="show" id="zkg-fV-zAr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noch keinen Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdl-7p-oUk">
@@ -253,8 +253,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Anmelden" id="NJB-Iy-dTb"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="8aV-KN-b7P" id="Pw1-kG-uJu"/>
-                        <outlet property="passwortTextfield" destination="1OV-Ac-za6" id="Hmd-EQ-Jwq"/>
+                        <outlet property="emailTextfield" destination="8aV-KN-b7P" id="EM7-Gb-a1v"/>
+                        <outlet property="passwortTextfield" destination="1OV-Ac-za6" id="kib-uu-FUQ"/>
                         <outlet property="view" destination="3Mc-1a-2Gq" id="ndM-ga-zFR"/>
                     </connections>
                 </viewController>
@@ -283,9 +283,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="pessWeiter:" destination="25t-Qp-on0" eventType="touchUpInside" id="cTl-14-5Af"/>
-                                    <action selector="pressWeiter:" destination="25t-Qp-on0" eventType="touchUpInside" id="lVa-bE-rAO"/>
-                                    <segue destination="Q8D-6a-SxX" kind="show" id="bQ6-Gj-TkB"/>
+                                    <action selector="pressWeiter:" destination="25t-Qp-on0" eventType="touchUpInside" id="agh-G8-V6I"/>
+                                    <segue destination="Q8D-6a-SxX" kind="show" id="fET-kN-D4j"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Vorname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiQ-w0-EIB">
@@ -324,11 +323,10 @@
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="uge-kI-wF3"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="buttonWeiter" destination="ph0-66-Ucy" id="IMw-XZ-OId"/>
-                        <outlet property="emailTextfield" destination="iI5-Ax-vCY" id="bkI-kP-yGK"/>
-                        <outlet property="nachnameTextfield" destination="h98-9T-drv" id="YcU-Ha-0rD"/>
-                        <outlet property="passwortTextfield" destination="3tR-96-WkV" id="Z03-21-Bbn"/>
-                        <outlet property="vornameTextfield" destination="oiQ-w0-EIB" id="3Y2-Id-wax"/>
+                        <outlet property="emailTextfield" destination="iI5-Ax-vCY" id="Ijf-kh-lkE"/>
+                        <outlet property="nachnameTextfield" destination="h98-9T-drv" id="zlJ-sw-T4H"/>
+                        <outlet property="passwortTextfield" destination="3tR-96-WkV" id="z2C-2z-tRw"/>
+                        <outlet property="vornameTextfield" destination="oiQ-w0-EIB" id="nwO-3R-oEO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCU-zt-Xk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,7 +336,7 @@
         <!--Registieren-->
         <scene sceneID="DjV-KA-3dn">
             <objects>
-                <viewController title="Registieren" id="Q8D-6a-SxX" sceneMemberID="viewController">
+                <viewController title="Registieren" id="Q8D-6a-SxX" customClass="RegistrierenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAS-vK-Ljy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +465,7 @@
         <!--Registrieren-->
         <scene sceneID="alt-3s-hbt">
             <objects>
-                <viewController title="Registrieren" id="Puk-FY-u5a" sceneMemberID="viewController">
+                <viewController title="Registrieren" id="Puk-FY-u5a" customClass="RegistrierenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJf-6d-aFL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -587,7 +585,7 @@
         <!--Registrieren-->
         <scene sceneID="erM-V4-gPh">
             <objects>
-                <viewController title="Registrieren" id="rC2-2k-DYU" sceneMemberID="viewController">
+                <viewController title="Registrieren" id="rC2-2k-DYU" customClass="RegistrierenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yDO-Se-P1K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,7 +661,7 @@
         <!--Registrieren-->
         <scene sceneID="5ej-Kc-YHI">
             <objects>
-                <viewController title="Registrieren" id="MEt-m7-lzR" sceneMemberID="viewController">
+                <viewController title="Registrieren" id="MEt-m7-lzR" customClass="RegistrierenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JN-I0-Yox">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,16 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class LogInViewController: UIViewController {
 
-    @IBAction func textfieldNutzername(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var passwortTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
