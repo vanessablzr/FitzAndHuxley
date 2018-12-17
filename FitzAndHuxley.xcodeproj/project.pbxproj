@@ -10,13 +10,13 @@
 		17AA927521C5835D001C2BCC /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927421C5835D001C2BCC /* CategoryTableViewCell.swift */; };
 		17AA927721C583CF001C2BCC /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */; };
 		17AA927921C58407001C2BCC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927821C58407001C2BCC /* Category.swift */; };
+		381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381DA54321C81B3300869A59 /* HomescreenViewController.swift */; };
 		3856CF9021C7A6F00084974B /* RegistrierenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856CF8F21C7A6F00084974B /* RegistrierenViewController.swift */; };
 		38580F8C21C3A002007102F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580F8B21C3A002007102F0 /* AppDelegate.swift */; };
 		38580F9121C3A002007102F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38580F8F21C3A002007102F0 /* Main.storyboard */; };
 		38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38580F9221C3A002007102F0 /* FitzAndHuxley.xcdatamodeld */; };
 		38580F9621C3A003007102F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38580F9521C3A003007102F0 /* Assets.xcassets */; };
 		38580F9921C3A003007102F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38580F9721C3A003007102F0 /* LaunchScreen.storyboard */; };
-		38580FA121C3A114007102F0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FA021C3A114007102F0 /* PersistenceService.swift */; };
 		38580FA321C3A958007102F0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FA221C3A958007102F0 /* LogInViewController.swift */; };
 		38580FAE21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */; };
 		38580FAF21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */; };
@@ -26,6 +26,7 @@
 		17AA927421C5835D001C2BCC /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		17AA927821C58407001C2BCC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		381DA54321C81B3300869A59 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
 		3856CF8F21C7A6F00084974B /* RegistrierenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrierenViewController.swift; sourceTree = "<group>"; };
 		38580F8821C3A002007102F0 /* FitzAndHuxley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzAndHuxley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38580F8B21C3A002007102F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		38580F9521C3A003007102F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38580F9821C3A003007102F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38580F9A21C3A003007102F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38580FA021C3A114007102F0 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		38580FA221C3A958007102F0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityKonto+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityKonto+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -59,6 +59,17 @@
 				17AA927821C58407001C2BCC /* Category.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		381DA54721C82BA900869A59 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				38580F9A21C3A003007102F0 /* Info.plist */,
+				38580F9221C3A002007102F0 /* FitzAndHuxley.xcdatamodeld */,
+				38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */,
+				38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		3856CF8E21C7A5DD0084974B /* LogIn */ = {
@@ -96,18 +107,15 @@
 		38580F8A21C3A002007102F0 /* FitzAndHuxley */ = {
 			isa = PBXGroup;
 			children = (
+				381DA54721C82BA900869A59 /* CoreData */,
 				3856CF9121C7A6FC0084974B /* SignUp */,
 				3856CF8E21C7A5DD0084974B /* LogIn */,
 				1742E43021C57FCD004C5D68 /* Category */,
-				38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */,
-				38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */,
 				38580F8B21C3A002007102F0 /* AppDelegate.swift */,
 				38580F8F21C3A002007102F0 /* Main.storyboard */,
+				381DA54321C81B3300869A59 /* HomescreenViewController.swift */,
 				38580F9521C3A003007102F0 /* Assets.xcassets */,
 				38580F9721C3A003007102F0 /* LaunchScreen.storyboard */,
-				38580F9A21C3A003007102F0 /* Info.plist */,
-				38580F9221C3A002007102F0 /* FitzAndHuxley.xcdatamodeld */,
-				38580FA021C3A114007102F0 /* PersistenceService.swift */,
 			);
 			path = FitzAndHuxley;
 			sourceTree = "<group>";
@@ -184,7 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA927921C58407001C2BCC /* Category.swift in Sources */,
-				38580FA121C3A114007102F0 /* PersistenceService.swift in Sources */,
+				381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */,
 				38580FAE21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift in Sources */,
 				38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */,
 				3856CF9021C7A6F00084974B /* RegistrierenViewController.swift in Sources */,

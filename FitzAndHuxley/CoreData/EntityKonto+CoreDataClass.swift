@@ -9,8 +9,8 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 @objc(EntityKonto)
 public class EntityKonto: NSManagedObject {
-
 }
