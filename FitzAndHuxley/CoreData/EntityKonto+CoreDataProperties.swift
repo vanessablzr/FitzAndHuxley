@@ -16,6 +16,7 @@ extension EntityKonto {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<EntityKonto> {
         return NSFetchRequest<EntityKonto>(entityName: "EntityKonto")
     }
+    
 
     @NSManaged public var vorname: String?
     @NSManaged public var nachname: String?

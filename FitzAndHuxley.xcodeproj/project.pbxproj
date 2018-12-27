@@ -11,6 +11,8 @@
 		17AA927721C583CF001C2BCC /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */; };
 		17AA927921C58407001C2BCC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927821C58407001C2BCC /* Category.swift */; };
 		381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381DA54321C81B3300869A59 /* HomescreenViewController.swift */; };
+		382C80E921D2698C0072D186 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C80E821D2698C0072D186 /* MapViewController.swift */; };
+		3844FAB021CC14830012432A /* ZahlungsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844FAAF21CC14830012432A /* ZahlungsViewController.swift */; };
 		3856CF9021C7A6F00084974B /* RegistrierenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3856CF8F21C7A6F00084974B /* RegistrierenViewController.swift */; };
 		38580F8C21C3A002007102F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580F8B21C3A002007102F0 /* AppDelegate.swift */; };
 		38580F9121C3A002007102F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38580F8F21C3A002007102F0 /* Main.storyboard */; };
@@ -20,6 +22,7 @@
 		38580FA321C3A958007102F0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FA221C3A958007102F0 /* LogInViewController.swift */; };
 		38580FAE21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */; };
 		38580FAF21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */; };
+		38A74BB521D4FD9F00EB31E4 /* AdressenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A74BB421D4FD9F00EB31E4 /* AdressenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,8 @@
 		17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		17AA927821C58407001C2BCC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		381DA54321C81B3300869A59 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
+		382C80E821D2698C0072D186 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = FitzAndHuxley/MapViewController.swift; sourceTree = "<group>"; };
+		3844FAAF21CC14830012432A /* ZahlungsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahlungsViewController.swift; sourceTree = "<group>"; };
 		3856CF8F21C7A6F00084974B /* RegistrierenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrierenViewController.swift; sourceTree = "<group>"; };
 		38580F8821C3A002007102F0 /* FitzAndHuxley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitzAndHuxley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38580F8B21C3A002007102F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		38580FA221C3A958007102F0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		38580FAC21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityKonto+CoreDataClass.swift"; sourceTree = "<group>"; };
 		38580FAD21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityKonto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		38A74BB421D4FD9F00EB31E4 /* AdressenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				3856CF8F21C7A6F00084974B /* RegistrierenViewController.swift */,
+				38A74BB421D4FD9F00EB31E4 /* AdressenViewController.swift */,
+				3844FAAF21CC14830012432A /* ZahlungsViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 		38580F7F21C3A002007102F0 = {
 			isa = PBXGroup;
 			children = (
+				382C80E821D2698C0072D186 /* MapViewController.swift */,
 				38580F8A21C3A002007102F0 /* FitzAndHuxley */,
 				38580F8921C3A002007102F0 /* Products */,
 			);
@@ -191,14 +200,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3844FAB021CC14830012432A /* ZahlungsViewController.swift in Sources */,
 				17AA927921C58407001C2BCC /* Category.swift in Sources */,
 				381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */,
 				38580FAE21C3B0E8007102F0 /* EntityKonto+CoreDataClass.swift in Sources */,
 				38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */,
 				3856CF9021C7A6F00084974B /* RegistrierenViewController.swift in Sources */,
 				38580FA321C3A958007102F0 /* LogInViewController.swift in Sources */,
+				382C80E921D2698C0072D186 /* MapViewController.swift in Sources */,
 				17AA927721C583CF001C2BCC /* CategoryTableViewController.swift in Sources */,
 				38580F8C21C3A002007102F0 /* AppDelegate.swift in Sources */,
+				38A74BB521D4FD9F00EB31E4 /* AdressenViewController.swift in Sources */,
 				38580FAF21C3B0E8007102F0 /* EntityKonto+CoreDataProperties.swift in Sources */,
 				17AA927521C5835D001C2BCC /* CategoryTableViewCell.swift in Sources */,
 			);
@@ -348,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVS5GQ4RM5;
-				INFOPLIST_FILE = FitzAndHuxley/Info.plist;
+				INFOPLIST_FILE = FitzAndHuxley/CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVS5GQ4RM5;
-				INFOPLIST_FILE = FitzAndHuxley/Info.plist;
+				INFOPLIST_FILE = FitzAndHuxley/CoreData/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
