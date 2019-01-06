@@ -9,7 +9,7 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-
+    var modifier = ""
     var categoryArray = [Category]()
     
     override func viewDidLoad() {
@@ -52,16 +52,16 @@ class CategoryTableViewController: UITableViewController {
         let photoRucksack = UIImage(named: "grey - Icon (Kategorie) - Rucksack")
         let photoWeekenderBag = UIImage(named: "grey - Icon (Kategorie) - Weekender Bag")
         
-        guard let categoryBracelet = Category(categoryName: "Armbänder", categoryPhoto: photoBracelet) else {
+        guard let categoryBracelet = Category(categoryName: "armband", categoryPhoto: photoBracelet) else {
             fatalError("Unable to instantiate categoryBracelet")
         }
-        guard let categoryPortemonnai = Category(categoryName: "Portemonnais", categoryPhoto: photoPortemonnai) else {
+        guard let categoryPortemonnai = Category(categoryName: "portemonnaie", categoryPhoto: photoPortemonnai) else {
             fatalError("Unable to instantiate categoryPortemonnai")
         }
-        guard let categoryRucksack = Category(categoryName: "Rucksäcke", categoryPhoto: photoRucksack) else {
+        guard let categoryRucksack = Category(categoryName: "rucksack", categoryPhoto: photoRucksack) else {
             fatalError("Unable to instantiate categoryRucksack")
         }
-        guard let categoryWeekenderBag = Category(categoryName: "Weekender Bags", categoryPhoto: photoWeekenderBag) else {
+        guard let categoryWeekenderBag = Category(categoryName: "weekender", categoryPhoto: photoWeekenderBag) else {
             fatalError("Unable to instantiate categoryWeekenderBag")
         }
         
@@ -69,6 +69,17 @@ class CategoryTableViewController: UITableViewController {
         
     }
 
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        modifier = categoryArray[indexPath.row].categoryName
+        return indexPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CategoryDetailCollectionViewController{
+            let subcategories = segue.destination as? CategoryDetailCollectionViewController
+            subcategories?.subcategoryModifier = modifier
+        }
+    }
     
 }
 

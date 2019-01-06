@@ -662,7 +662,7 @@
         <!--Rucksäcke-->
         <scene sceneID="2jS-vm-qV6">
             <objects>
-                <viewController title="Rucksäcke" id="lbu-hT-B7v" customClass="ArtikelViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rucksäcke" id="lbu-hT-B7v" customClass="CategoryDetailCollectionViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zOZ-qQ-CdO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -677,7 +677,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XWj-MD-1mu" customClass="CollectionViewCell" customModule="FitzAndHuxley" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryDetailCell" id="XWj-MD-1mu" customClass="CategoryDetailCollectionViewCell" customModule="FitzAndHuxley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="136" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -704,6 +704,11 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="CategoryDetailCellImage" destination="mkf-lS-EY2" id="X9e-Zn-iGu"/>
+                                            <outlet property="CategoryDetailCellName" destination="rzc-Oh-Hgc" id="fqo-1Y-lWi"/>
+                                            <outlet property="CategoryDetailCellPrice" destination="LoQ-2Q-b3K" id="gU6-rM-Oe6"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -1161,10 +1166,10 @@
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
-        <image name="white - Icon - Location - 24px" width="24" height="24"/>
-        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nHh-nK-czw"/>
