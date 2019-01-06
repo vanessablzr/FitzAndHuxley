@@ -24,4 +24,5 @@ extension ArtikelEntity {
     @NSManaged public var material : String
     @NSManaged public var image : String
     @NSManaged public var inWarenkorb : Bool
+    @NSManaged public var id : String
 }

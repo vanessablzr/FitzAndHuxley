@@ -5,6 +5,7 @@
         <attribute name="eigenschaften" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="farbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groesse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="inWarenkorb" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +19,7 @@
         <relationship name="equionoxSmall" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArtikelEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ArtikelEntity" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="ArtikelEntity" positionX="-63" positionY="-18" width="128" height="195"/>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="45"/>
         <element name="Thumbnail" positionX="-54" positionY="63" width="128" height="90"/>
     </elements>

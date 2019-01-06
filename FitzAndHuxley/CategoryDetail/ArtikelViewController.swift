@@ -31,49 +31,7 @@ class ArtikelViewController: UIViewController {
         self.collectionView.delegate = (self as! UICollectionViewDelegate)
 
     }
-    
-    func createDemoData() {
-        let artikelEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "ArtikelEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
-        
-        if artikelEntity != nil {
-            let artikel1: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
-            artikel1.image = "1_EQUINOX"
-            artikel1.name = "EQUINOX"
-            artikel1.preis = "99.00"
-            
-            let artikel2: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
-            artikel2.image = "1_CONVEYOR_grey-ve"
-            artikel2.name = "CONVEYOR"
-            artikel2.preis = "79.00"
-            
-            let artikel3: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
-            artikel3.image = "1_SOLSTICE_berry"
-            artikel3.name = "SOLSTICE"
-            artikel3.preis = "99.00"
-            
-            let artikel4: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
-            artikel4.image = "1_CURATOR"
-            artikel4.name = "CURATOR"
-            artikel4.preis = "89.00"
-  
-            self.appDelegate.coreDataStack.saveContext()
-        }
-    }
-    
-    func fetchDemoData() {
-        let fetchRequest : NSFetchRequest =  NSFetchRequest<NSFetchRequestResult>(entityName: "ArtikelEntity")
-        do {
-            if let results = try self.appDelegate.coreDataStack.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject] {
-                let fetchedArtikel: [ArtikelEntity]? = results as? [ArtikelEntity]
-                if fetchedArtikel != nil {
-                    self.artikel = fetchedArtikel!
-                }
-            }
-        }
-        catch {
-           fatalError("fetch error")
-        }
-    }
+
 
 }
 

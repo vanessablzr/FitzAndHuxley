@@ -18,6 +18,13 @@ class HomescreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let firstStart : Bool? = UserDefaults.standard.object(forKey: "firstStart") as? Bool
+        
+        if firstStart == nil {
+            self.createDemoData()
+            UserDefaults.standard.set(false, forKey: "firstStart")
+        }
+        
     }
     
     
@@ -35,6 +42,7 @@ class HomescreenViewController: UIViewController {
             rucksack1.eigenschaften = "Unisex Mini-Rucksack (DinA4) in minimalistischem Design mit geräumiger Innentasche"
             rucksack1.material = "schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - echtes, schwarz gefärbtes Glattleder"
             rucksack1.inWarenkorb = false
+            rucksack1.id = "rucksack"
             
             let rucksack2: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             rucksack2.image = "1_SOLSTICE_berry"
@@ -46,6 +54,7 @@ class HomescreenViewController: UIViewController {
             rucksack2.eigenschaften = "Unisex Tages-Rucksack in minimalistischem Design mit Laptop-Fach und zwei geräumigen Taschen im Inneren"
             rucksack2.material = "gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - echtes, leicht geöltes Rindsleder"
             rucksack2.inWarenkorb = false
+            rucksack2.id = "rucksack"
             
             let weekender1: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             weekender1.image = "1_Humphrey"
@@ -57,6 +66,7 @@ class HomescreenViewController: UIViewController {
             weekender1.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
             weekender1.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, schwarz gefärbtem Glattleder"
             weekender1.inWarenkorb = false
+            weekender1.id = "weekender"
             
             let weekender2: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             weekender2.image = "1_PEARY"
@@ -68,6 +78,8 @@ class HomescreenViewController: UIViewController {
             weekender2.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
             weekender2.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, leicht geölten Glattleder"
             weekender2.inWarenkorb = false
+            weekender2.id = "weekender"
+
             
             let armband1: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             armband1.image = "1_ALLY_dusk"
@@ -79,6 +91,7 @@ class HomescreenViewController: UIViewController {
             armband1.eigenschaften = "Unisex Lederarmband längenverstellbar"
             armband1.material = "echtes, leicht geöltes Rindsleder"
             armband1.inWarenkorb = false
+            armband1.id = "armband"
             
             let armband2: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             armband2.image = "1_ROTARY_dawn"
@@ -90,6 +103,7 @@ class HomescreenViewController: UIViewController {
             armband2.eigenschaften = "Unisex Lederarmband längenverstellbar"
             armband2.material = "echtes, schwarzes gefärbtes Glattleder"
             armband2.inWarenkorb = false
+            armband2.id = "armband"
             
             let portemonnaie1: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             portemonnaie1.image = "1_MAGPIE_dawn"
@@ -101,6 +115,7 @@ class HomescreenViewController: UIViewController {
             portemonnaie1.eigenschaften = "Unisex Geldbörse mit Geldklammer und Ultraflach, ohne Münzfach"
             portemonnaie1.material = "echtes, schwarzes gefärbtes Glattleder"
             portemonnaie1.inWarenkorb = false
+            portemonnaie1.id = "portemonnaie"
             
             let portemonnaie2: ArtikelEntity = ArtikelEntity(entity: artikelEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
             portemonnaie2.image = "1_SORREL_dawn"
@@ -112,6 +127,7 @@ class HomescreenViewController: UIViewController {
             portemonnaie2.eigenschaften = "Unisex Geldbörse mit Ultraflach, ohne Münzfach"
             portemonnaie2.material = "echtes, schwarzes gefärbtes Glattleder"
             portemonnaie2.inWarenkorb = false
+             portemonnaie2.id = "portemonnaie"
             
             self.appDelegate.coreDataStack.saveContext()
         }
