@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G4015" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ArtikelEntity" representedClassName="ArtikelEntity" syncable="YES">
-        <attribute name="anzahl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="anzahl" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="eigenschaften" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="farbe" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="groesse" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="groesseBesch" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inWarenkorb" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="preis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preis" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
     <entity name="Thumbnail" representedClassName="Thumbnail" syncable="YES" codeGenerationType="class">

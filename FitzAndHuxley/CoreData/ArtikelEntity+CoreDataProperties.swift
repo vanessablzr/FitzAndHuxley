@@ -16,12 +16,11 @@ extension ArtikelEntity {
     }
     
     @NSManaged public var name : String
-    @NSManaged public var preis : String
-    @NSManaged public var anzahl : String
+    @NSManaged public var preis : Double
+    @NSManaged public var anzahl : Int
     @NSManaged public var eigenschaften : String
     @NSManaged public var farbe : String
     @NSManaged public var groesse : String
-    @NSManaged public var groesseBesch : String
     @NSManaged public var material : String
     @NSManaged public var image : String
 }
