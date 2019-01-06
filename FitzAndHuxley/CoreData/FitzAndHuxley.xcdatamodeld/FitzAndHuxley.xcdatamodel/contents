@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G2208" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="EntityKonto" representedClassName="EntityKonto" syncable="YES"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G4015" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ArtikelEntity" representedClassName="ArtikelEntity" syncable="YES">
+        <attribute name="anzahl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eigenschaften" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="farbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groesse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groesseBesch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="material" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preis" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="Thumbnail" representedClassName="Thumbnail" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="equionoxSmall" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArtikelEntity" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="EntityKonto" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="ArtikelEntity" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Entity" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Thumbnail" positionX="-54" positionY="63" width="128" height="90"/>
     </elements>
 </model>
