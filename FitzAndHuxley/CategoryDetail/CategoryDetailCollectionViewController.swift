@@ -36,7 +36,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
         }
         catch {
             fatalError("There was an error fetching the items")
-        }
+        } 
         
         
         
