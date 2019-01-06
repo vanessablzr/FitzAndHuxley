@@ -22,7 +22,7 @@ class HomescreenViewController: UIViewController {
         
         if firstStart == nil {
             self.createDemoData()
-            UserDefaults.standard.set(false, forKey: "firstStart")
+            UserDefaults.standard.set(false, forKey: "firstStart") 
         }
         
     }
