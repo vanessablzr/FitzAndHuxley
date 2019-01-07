@@ -10,7 +10,8 @@ import UIKit
 
 class CategoryDetailCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var CategoryDetailCellImage: UIImageView!
-    @IBOutlet weak var CategoryDetailCellName: UILabel!
-    @IBOutlet weak var CategoryDetailCellPrice: UILabel!
+    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
 }

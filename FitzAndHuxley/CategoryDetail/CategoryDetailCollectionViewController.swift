@@ -18,7 +18,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchArtikel(modifier: subcategoryModifier)
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -59,9 +59,9 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryDetailCell", for: indexPath) as! CategoryDetailCollectionViewCell
         let preis = artikelArray[indexPath.row].preis
         let preisLabel = "\(preis)" + "€"
-        cell.CategoryDetailCellImage.image = UIImage(named: artikelArray[indexPath.row].image)
-        cell.CategoryDetailCellName.text = artikelArray[indexPath.row].name
-        cell.CategoryDetailCellPrice.text = preisLabel
+        cell.detailImage.image = UIImage(named: artikelArray[indexPath.row].image)
+        cell.nameLabel.text = artikelArray[indexPath.row].name
+        cell.priceLabel.text = preisLabel
     
         return cell
     }
