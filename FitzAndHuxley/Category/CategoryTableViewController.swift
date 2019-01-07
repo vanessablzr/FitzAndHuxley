@@ -74,26 +74,12 @@ class CategoryTableViewController: UITableViewController {
         return indexPath
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination is CategoryDetailCollectionViewController{
-//            let subcategories = segue.destination as? CategoryDetailCollectionViewController
-//            subcategories?.subcategoryModifier = modifier
-//        }
-//    }
-   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowCategoryDetail" {
-            let detailVC : CategoryDetailCollectionViewController? = segue.destination as? CategoryDetailCollectionViewController
-            let cell : UITableViewCell = (sender as? UITableViewCell)!
-            
-            if cell != nil && detailVC != nil {
-                let indexPath : IndexPath? = self.tableView.indexPath(for: cell)
-                if indexPath != nil {
-                    let category : Category = categoryArray [(indexPath?.row)!]
-    
-                }
-            }
+        if segue.destination is CategoryDetailCollectionViewController{
+            let subcategories = segue.destination as? CategoryDetailCollectionViewController
+            subcategories?.subcategoryModifier = modifier
         }
     }
+    
 }
 

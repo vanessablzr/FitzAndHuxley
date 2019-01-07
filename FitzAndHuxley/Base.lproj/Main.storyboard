@@ -641,6 +641,7 @@
                                 <connections>
                                     <outlet property="categoryNameLabel" destination="FBD-ed-ZS8" id="npj-QW-AhK"/>
                                     <outlet property="categoryPhotoImage" destination="F0G-Fj-yKO" id="zIf-pn-bop"/>
+                                    <segue destination="lbu-hT-B7v" kind="show" id="dzE-hj-hTy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -654,9 +655,6 @@
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="m0d-Je-TQd"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="lbu-hT-B7v" kind="show" identifier="ShowCategoryDetail" id="MrQ-zB-mkU"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1169,10 +1167,10 @@
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
-        <image name="white - Icon - Location - 24px" width="24" height="24"/>
-        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nHh-nK-czw"/>
