@@ -11,7 +11,7 @@ import CoreData
 
 class CoreDataStack {
     lazy var managedObjectModel : NSManagedObjectModel = {
-        let modelUrl = Bundle.main.url(forResource: "ArtikelDataModel", withExtension: "momd")!
+        let modelUrl = Bundle.main.url(forResource: "FitzAndHuxley", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelUrl)!
     }()
     
