@@ -15,6 +15,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     var artikelArray: [ArtikelEntity] = []
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var subcategoryModifier = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +65,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     
         return cell
     }
-
+    
 }
 
 

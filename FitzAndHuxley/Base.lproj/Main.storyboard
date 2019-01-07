@@ -654,6 +654,9 @@
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="m0d-Je-TQd"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="lbu-hT-B7v" kind="show" identifier="ShowCategoryDetail" id="MrQ-zB-mkU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -668,7 +671,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-Ye-Uwc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RCa-rj-opl">
                                     <size key="itemSize" width="136" height="157"/>
@@ -731,7 +734,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B68-Q9-sFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="721"/>
+            <point key="canvasLocation" x="3536" y="696"/>
         </scene>
         <!--Arikelansicht View Controller-->
         <scene sceneID="iy3-IG-Muj">
@@ -1166,10 +1169,10 @@
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
-        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="fh_logo_transparent_final" width="1169" height="468"/>
+        <image name="white - Icon - Category - 24px" width="24" height="24"/>
+        <image name="white - Icon - Location - 24px" width="24" height="24"/>
+        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nHh-nK-czw"/>
