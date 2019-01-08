@@ -19,7 +19,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchArtikel(modifier: subcategoryModifier)
-        
+
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
     }
