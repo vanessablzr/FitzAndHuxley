@@ -43,8 +43,6 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
         
     }
 
-   
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -65,7 +63,19 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     
         return cell
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ArtikelDetailViewController{
+            let detailVC = segue.destination as? ArtikelDetailViewController
+            let index = collectionView.indexPathsForSelectedItems!.first!.row
+            detailVC?.selectedArtikel = artikelArray[index]
+        }
+    }
     
 }
+
+
+
+
  
 

@@ -79,7 +79,7 @@ class CategoryTableViewController: UITableViewController {
             let subcategories = segue.destination as? CategoryDetailCollectionViewController
             subcategories?.subcategoryModifier = modifier
         }
-        print("segue aufgerufen")
+
     }
     
 }

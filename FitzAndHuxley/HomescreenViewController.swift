@@ -38,7 +38,7 @@ class HomescreenViewController: UIViewController {
             rucksack1.preis = 99.00
             rucksack1.farbe = "schwarz"
             rucksack1.groesse = "small"
-            rucksack1.anzahl = 1
+//            rucksack1.anzahl = 1
             rucksack1.eigenschaften = "Unisex Mini-Rucksack (DinA4) in minimalistischem Design mit geräumiger Innentasche"
             rucksack1.material = "schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - echtes, schwarz gefärbtes Glattleder"
             rucksack1.inWarenkorb = false
@@ -50,7 +50,7 @@ class HomescreenViewController: UIViewController {
             rucksack2.preis = 99.00
             rucksack2.farbe = "berry"
             rucksack2.groesse = "small"
-            rucksack2.anzahl = 1
+//            rucksack2.anzahl = 1
             rucksack2.eigenschaften = "Unisex Tages-Rucksack in minimalistischem Design mit Laptop-Fach und zwei geräumigen Taschen im Inneren"
             rucksack2.material = "gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - echtes, leicht geöltes Rindsleder"
             rucksack2.inWarenkorb = false
@@ -62,7 +62,7 @@ class HomescreenViewController: UIViewController {
             weekender1.preis = 189.00
             weekender1.farbe = "schwarz"
             weekender1.groesse = "small"
-            weekender1.anzahl = 1
+//            weekender1.anzahl = 1
             weekender1.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
             weekender1.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, schwarz gefärbtem Glattleder"
             weekender1.inWarenkorb = false
@@ -74,7 +74,7 @@ class HomescreenViewController: UIViewController {
             weekender2.preis = 189.00
             weekender2.farbe = "braun"
             weekender2.groesse = "small"
-            weekender2.anzahl = 1
+//            weekender2.anzahl = 1
             weekender2.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
             weekender2.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, leicht geölten Glattleder"
             weekender2.inWarenkorb = false
@@ -87,7 +87,7 @@ class HomescreenViewController: UIViewController {
             armband1.preis = 19.00
             armband1.farbe = "braun"
             armband1.groesse = "small"
-            armband1.anzahl = 1
+//            armband1.anzahl = 1
             armband1.eigenschaften = "Unisex Lederarmband längenverstellbar"
             armband1.material = "echtes, leicht geöltes Rindsleder"
             armband1.inWarenkorb = false
@@ -99,7 +99,7 @@ class HomescreenViewController: UIViewController {
             armband2.preis = 17.00
             armband2.farbe = "schwarz"
             armband2.groesse = "small"
-            armband2.anzahl = 1
+//            armband2.anzahl = 1
             armband2.eigenschaften = "Unisex Lederarmband längenverstellbar"
             armband2.material = "echtes, schwarzes gefärbtes Glattleder"
             armband2.inWarenkorb = false
@@ -111,7 +111,7 @@ class HomescreenViewController: UIViewController {
             portemonnaie1.preis = 39.00
             portemonnaie1.farbe = "schwarz"
             portemonnaie1.groesse = "small"
-            portemonnaie1.anzahl = 1
+//            portemonnaie1.anzahl = 1
             portemonnaie1.eigenschaften = "Unisex Geldbörse mit Geldklammer und Ultraflach, ohne Münzfach"
             portemonnaie1.material = "echtes, schwarzes gefärbtes Glattleder"
             portemonnaie1.inWarenkorb = false
@@ -123,7 +123,7 @@ class HomescreenViewController: UIViewController {
             portemonnaie2.preis = 39.00
             portemonnaie2.farbe = "schwarz"
             portemonnaie2.groesse = "small"
-            portemonnaie2.anzahl = 1
+//            portemonnaie2.anzahl = 1
             portemonnaie2.eigenschaften = "Unisex Geldbörse mit Ultraflach, ohne Münzfach"
             portemonnaie2.material = "echtes, schwarzes gefärbtes Glattleder"
             portemonnaie2.inWarenkorb = false

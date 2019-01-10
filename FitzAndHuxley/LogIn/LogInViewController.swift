@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
     
    
     @IBAction func pressRegistrieren(_ sender: Any) {
-        self.performSegue(withIdentifier: "toRegistrierenscreen", sender: nil)
+//        self.performSegue(withIdentifier: "toRegistrierenscreen", sender: nil)
     }
     
 }
