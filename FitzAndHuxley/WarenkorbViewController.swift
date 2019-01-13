@@ -13,6 +13,7 @@ class WarenkorbViewController: UIViewController {
     var warenkorbArray : [WarenkorbEntity] = []
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var gesamtSumme: UILabel!
     
     override func viewDidLoad() {
         
