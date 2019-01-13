@@ -26,6 +26,10 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     
     var selectedArtikel: ArtikelEntity!
     
+    var selectedGroesse = ""
+    var selectedFarbe = ""
+    var selectedAnzahl = "1"
+    
     
     
     @IBOutlet weak var ArtikelDetailImage: UIImageView!
@@ -42,8 +46,24 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         tblvFarbe.isHidden = true
         self.txtfldAnzahl.delegate = self
     }
-
-    
+// erstellt Artikel für Warenkorb
+    func createNewWarenkorbEntity() {
+        let warenkorbEntity: NSEntityDescription? = NSEntityDescription.entity(forEntityName: "WarenkorbEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
+        
+        if warenkorbEntity != nil {
+           let currentArtikel = WarenkorbEntity(entity: warenkorbEntity!, insertInto: self.appDelegate.coreDataStack.managedObjectContext)
+            currentArtikel.farbe = selectedFarbe
+            currentArtikel.groesse = selectedGroesse
+            currentArtikel.anzahl = selectedAnzahl
+            
+            currentArtikel.image = selectedArtikel.image
+            currentArtikel.name = selectedArtikel.name
+            currentArtikel.preis = selectedArtikel.preis
+        }
+        
+        self.appDelegate.coreDataStack.saveContext()
+    }
+//    setzt die Daten des Artikels
     func setArtikelData(){
         let preis = selectedArtikel.preis
         let preisLabel = "\(preis)" + "€"
@@ -54,13 +74,19 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         ArtikelDetailEigenschaft.text = selectedArtikel.eigenschaften
         ArtikelDetailMaterial.text = selectedArtikel.material
     }
-    
+//    nur Zahlen erlaubt
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits
         let characterSet = CharacterSet (charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
     }
     
+    
+// beim Klick auf den Button wird ein neuer Warenkorbartikel erstellt mit der angegebenen Anzahl
+    @IBAction func btnInWarenkorb(_ sender: Any) {
+        selectedAnzahl = txtfldAnzahl.text!
+        createNewWarenkorbEntity()
+    }
     
     @IBAction func btnGroesseAction(_ sender: Any) {
         if tblvGroesse.isHidden {
@@ -77,7 +103,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
             animateBtnFarbe(toggle: false)
         }
     }
-    
+//Toggled die Dropdownmenüs
     func animateBtnGroesse(toggle: Bool) {
         if toggle {
             UIView.animate(withDuration: 0.0){
@@ -102,6 +128,8 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
+
 
 extension ArtikelDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,9 +167,11 @@ extension ArtikelDetailViewController: UITableViewDelegate, UITableViewDataSourc
         case tblvGroesse:
             btnGroesse.setTitle("\(groesseArray[indexPath.row])", for: .normal)
             animateBtnGroesse(toggle: false)
+            selectedGroesse = groesseArray[indexPath.row]
         case tblvFarbe:
             btnFarbe.setTitle("\(farbeArray[indexPath.row])", for: .normal)
             animateBtnFarbe(toggle: false)
+            selectedFarbe = farbeArray[indexPath.row]
         default:
             print("Fehler in didSelectRowAt switch")
         }
