@@ -10,9 +10,10 @@ import UIKit
 
 class WarenkorbViewController: UIViewController {
     
-    var warenkorbArray : [WarenkorbEntity] = []
+//    var warenkorbArray : [WarenkorbEntity] = []
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var gesamtSumme: UILabel!
     
     override func viewDidLoad() {
         
@@ -41,5 +42,19 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
 }
+//extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//
+    
+
