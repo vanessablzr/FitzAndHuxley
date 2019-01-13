@@ -8,10 +8,14 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+//    Instanz für aktuellen Standort
+    var locationManager : CLLocationManager!
     
 //    Pins für jeden Standort
     var pinHamburg = MKPointAnnotation()
@@ -22,6 +26,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         self.mapView.delegate = self
         mapView.showsUserLocation = true
+        self.locationManager = CLLocationManager()
+        
+//        Einverständis um auf UserLocation zuzugreifen
+        if CLLocationManager.locationServicesEnabled() == true {
+            if CLLocationManager.authorizationStatus() == .restricted ||
+            CLLocationManager.authorizationStatus() == .denied ||
+                CLLocationManager.authorizationStatus() == .notDetermined {
+                locationManager.requestWhenInUseAuthorization()
+            }
+            locationManager.desiredAccuracy = 1.0
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation()
+        } else {
+            print ("Turn your GPS service on")
+        }
         
 //        Erster Standort Hamburg
         let hamburgCoordinate = CLLocationCoordinate2D(latitude: 53.5548584, longitude: 9.9894992)
@@ -60,6 +79,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.first!
+        
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 300000, longitudinalMeters: 300000)
+        
+        mapView.setRegion(coordinateRegion, animated: true)
+        locationManager.stopUpdatingLocation()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
