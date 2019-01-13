@@ -18,9 +18,18 @@
         <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="equionoxSmall" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArtikelEntity" syncable="YES"/>
     </entity>
+    <entity name="WarenkorbEntity" representedClassName="WarenkorbEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="anzahl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="farbe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groesse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="preis" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
         <element name="ArtikelEntity" positionX="-63" positionY="-18" width="128" height="195"/>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="45"/>
         <element name="Thumbnail" positionX="-54" positionY="63" width="128" height="90"/>
+        <element name="WarenkorbEntity" positionX="-63" positionY="54" width="128" height="135"/>
     </elements>
 </model>

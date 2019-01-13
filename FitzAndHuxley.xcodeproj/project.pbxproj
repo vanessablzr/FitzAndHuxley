@@ -13,6 +13,8 @@
 		17AA927521C5835D001C2BCC /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927421C5835D001C2BCC /* CategoryTableViewCell.swift */; };
 		17AA927721C583CF001C2BCC /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */; };
 		17AA927921C58407001C2BCC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA927821C58407001C2BCC /* Category.swift */; };
+		381A2E3D21EB4F8D00CFDDF6 /* WarenkorbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A2E3C21EB4F8D00CFDDF6 /* WarenkorbViewController.swift */; };
+		381A2E4021EB519F00CFDDF6 /* WarenkorbTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A2E3F21EB519F00CFDDF6 /* WarenkorbTableViewCell.swift */; };
 		381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381DA54321C81B3300869A59 /* HomescreenViewController.swift */; };
 		382C80E921D2698C0072D186 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382C80E821D2698C0072D186 /* MapViewController.swift */; };
 		3844FAB021CC14830012432A /* ZahlungsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844FAAF21CC14830012432A /* ZahlungsViewController.swift */; };
@@ -36,6 +38,8 @@
 		17AA927421C5835D001C2BCC /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		17AA927621C583CF001C2BCC /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		17AA927821C58407001C2BCC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		381A2E3C21EB4F8D00CFDDF6 /* WarenkorbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WarenkorbViewController.swift; path = FitzAndHuxley/WarenkorbViewController.swift; sourceTree = SOURCE_ROOT; };
+		381A2E3F21EB519F00CFDDF6 /* WarenkorbTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarenkorbTableViewCell.swift; sourceTree = "<group>"; };
 		381DA54321C81B3300869A59 /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
 		382C80E821D2698C0072D186 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = FitzAndHuxley/MapViewController.swift; sourceTree = "<group>"; };
 		3844FAAF21CC14830012432A /* ZahlungsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZahlungsViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		384D62C721E230C900997C92 /* Warenkorb */ = {
 			isa = PBXGroup;
 			children = (
+				381A2E3C21EB4F8D00CFDDF6 /* WarenkorbViewController.swift */,
+				381A2E3F21EB519F00CFDDF6 /* WarenkorbTableViewCell.swift */,
 			);
 			path = Warenkorb;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			files = (
 				3844FAB021CC14830012432A /* ZahlungsViewController.swift in Sources */,
 				17AA927921C58407001C2BCC /* Category.swift in Sources */,
+				381A2E3D21EB4F8D00CFDDF6 /* WarenkorbViewController.swift in Sources */,
 				381DA54421C81B3300869A59 /* HomescreenViewController.swift in Sources */,
 				38580F9421C3A002007102F0 /* FitzAndHuxley.xcdatamodeld in Sources */,
 				3856CF9021C7A6F00084974B /* RegistrierenViewController.swift in Sources */,
@@ -253,6 +260,7 @@
 				38A74BB521D4FD9F00EB31E4 /* AdressenViewController.swift in Sources */,
 				17AA927521C5835D001C2BCC /* CategoryTableViewCell.swift in Sources */,
 				17378DA421E2444700890672 /* CategoryDetailCollectionViewController.swift in Sources */,
+				381A2E4021EB519F00CFDDF6 /* WarenkorbTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
