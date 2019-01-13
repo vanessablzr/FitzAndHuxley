@@ -26,6 +26,13 @@ class BestelldatenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userVorname.text = UserDefaults.standard.string(forKey: "vorname")
-        
+        self.userNachname.text = UserDefaults.standard.string(forKey: "nachname")
+        self.userStrasse.text = UserDefaults.standard.string(forKey: "lieferStrasse")
+        self.userStrassenNr.text = UserDefaults.standard.string(forKey: "lieferNr")
+        self.userPlz.text = UserDefaults.standard.string(forKey: "lieferPlz")
+        self.userStadt.text = UserDefaults.standard.string(forKey: "lieferStadt")
+        self.userKarteninhaber.text = UserDefaults.standard.string(forKey: "kartenInhaber")
+        self.userKartennummer.text = UserDefaults.standard.string(forKey: "kartenNummer")
+        self.userKartendatum.text = UserDefaults.standard.string(forKey: "kartenDatum")
     }
 }
