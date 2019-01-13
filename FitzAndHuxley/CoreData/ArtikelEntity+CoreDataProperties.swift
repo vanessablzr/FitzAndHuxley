@@ -12,7 +12,7 @@ import CoreData
 extension ArtikelEntity {
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ArtikelEntity>{
-        return NSFetchRequest<ArtikelEntity>(entityName: "ArtikelEntity")
+        return NSFetchRequest<ArtikelEntity>(entityName: "ArtikelEntity") 
     }
     
     @NSManaged public var name : String
