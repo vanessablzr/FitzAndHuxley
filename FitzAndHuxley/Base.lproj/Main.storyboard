@@ -950,7 +950,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="qxX-DZ-b4G">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="qxX-DZ-b4G" customClass="WarenkorbTableViewCell" customModule="FitzAndHuxley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxX-DZ-b4G" id="B3X-um-t7W">
@@ -962,7 +962,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vla-2M-w5s">
-                                                    <rect key="frame" x="149" y="0.0" width="145" height="21"/>
+                                                    <rect key="frame" x="149" y="0.0" width="104" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -997,7 +997,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE6-fk-9Lr">
-                                                    <rect key="frame" x="261" y="0.0" width="59" height="22"/>
+                                                    <rect key="frame" x="268" y="0.0" width="52" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -1005,6 +1005,15 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artikelAnzahl" destination="e3k-K4-d2Z" id="Zuh-ef-3xD"/>
+                                            <outlet property="artikelFarbe" destination="eCq-QB-Kh1" id="pV7-oZ-ANH"/>
+                                            <outlet property="artikelGroesse" destination="VQu-mI-P4n" id="XEB-ot-lGJ"/>
+                                            <outlet property="imageArtikel" destination="THZ-WO-NjO" id="qCy-bd-OmH"/>
+                                            <outlet property="loeschenButton" destination="qE6-fk-9Lr" id="NCj-Qf-9J9"/>
+                                            <outlet property="nameArtikel" destination="vla-2M-w5s" id="fbe-00-rqc"/>
+                                            <outlet property="preisArtikelk" destination="Ubx-Ab-HYm" id="8Pc-M2-K5f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1041,10 +1050,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Warenkorb" id="MH1-eY-IFS"/>
                     <connections>
-                        <outlet property="imageArtikel" destination="THZ-WO-NjO" id="sFy-rV-cEG"/>
-                        <outlet property="loeschenButton" destination="qE6-fk-9Lr" id="Hv2-sX-MdV"/>
-                        <outlet property="nameArtikel" destination="vla-2M-w5s" id="NXQ-gE-4g0"/>
-                        <outlet property="preisArtikel" destination="Ubx-Ab-HYm" id="Ls5-kr-wLv"/>
                         <outlet property="tableView" destination="qPS-Fd-GJA" id="062-07-jsh"/>
                     </connections>
                 </viewController>
