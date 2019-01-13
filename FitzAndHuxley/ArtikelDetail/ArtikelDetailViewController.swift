@@ -11,6 +11,16 @@ import CoreData
 
 class ArtikelDetailViewController: UIViewController {
 
+    @IBOutlet weak var btnGroesse: UIButton!
+    @IBOutlet weak var tblvGroesse: UITableView!
+    
+    @IBOutlet weak var btnFarbe: UIButton!
+    @IBOutlet weak var tblvFarbe: UITableView!
+    
+    
+    var groesseArray = ["S", "M", "L"]
+    var farbeArray = ["Rot", "Schwarz", "Blau", "Grau"]
+    
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var selectedArtikel: ArtikelEntity!
@@ -25,6 +35,8 @@ class ArtikelDetailViewController: UIViewController {
         super.viewDidLoad()
         title = selectedArtikel.name
         setArtikelData()
+        tblvGroesse.isHidden = true
+        tblvFarbe.isHidden = true
         
         // Do any additional setup after loading the view.
     }
@@ -39,5 +51,101 @@ class ArtikelDetailViewController: UIViewController {
         ArtikelDetailEigenschaft.text = selectedArtikel.eigenschaften
         ArtikelDetailMaterial.text = selectedArtikel.material
     }
-
+    
+    
+    @IBAction func btnGroesseAction(_ sender: Any) {
+        print("btnGroesse geklickt")
+        if tblvGroesse.isHidden {
+            animateBtnGroesse(toggle: true)
+        } else {
+            animateBtnGroesse(toggle: false)
+        }
+    }
+    
+    @IBAction func btnFarbeAction(_ sender: Any) {
+        print("buttonFarbe geklickt")
+        if tblvFarbe.isHidden {
+            animateBtnFarbe(toggle: true)
+        } else {
+            animateBtnFarbe(toggle: false)
+        }
+    }
+    
+    func animateBtnGroesse(toggle: Bool) {
+        if toggle {
+            print("animateBtnGroesse if")
+            UIView.animate(withDuration: 0.0){
+                self.tblvGroesse.isHidden = false
+            }
+        } else {
+            print("animateBtnGroesse else")
+            UIView.animate(withDuration: 0.0){
+                self.tblvGroesse.isHidden = true
+            }
+        }
+    }
+    func animateBtnFarbe(toggle: Bool) {
+        if toggle {
+            print("animateBtnFarbe if")
+            UIView.animate(withDuration: 0.0){
+                self.tblvFarbe.isHidden = false
+            }
+        } else {
+            print("animateBtnFarbe else")
+            UIView.animate(withDuration: 0.0){
+                self.tblvFarbe.isHidden = true
+            }
+        }
+    }
+    
 }
+
+extension ArtikelDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var numberOfRow = 1
+        switch tableView {
+        case tblvGroesse:
+            numberOfRow = groesseArray.count
+        case tblvFarbe:
+            numberOfRow = farbeArray.count
+        default:
+            print("Fehler in numbersOfRowInSection switch")
+        }
+        
+        return numberOfRow
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
+        switch tableView {
+        case tblvGroesse:
+            cell = tableView.dequeueReusableCell(withIdentifier: "groesseCell", for: indexPath)
+            cell.textLabel?.text = groesseArray[indexPath.row]
+        case tblvFarbe:
+            cell = tableView.dequeueReusableCell(withIdentifier: "farbeCell", for: indexPath)
+            cell.textLabel?.text = farbeArray[indexPath.row]
+        default:
+            print("Fehler in cellForRowAt switch")
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch tableView {
+        case tblvGroesse:
+            btnGroesse.setTitle("\(groesseArray[indexPath.row])", for: .normal)
+            animateBtnGroesse(toggle: false)
+        case tblvFarbe:
+            btnFarbe.setTitle("\(farbeArray[indexPath.row])", for: .normal)
+            animateBtnFarbe(toggle: false)
+        default:
+            print("Fehler in didSelectRowAt switch")
+        }
+        
+        
+    }
+    
+}
+
+//farbeCell

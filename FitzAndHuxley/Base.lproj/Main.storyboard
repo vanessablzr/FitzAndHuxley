@@ -824,6 +824,78 @@
                                                 <color key="textColor" red="0.40090000910000001" green="0.40090000910000001" blue="0.40090000910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l4X-X3-XTw">
+                                                <rect key="frame" x="40" y="413" width="67" height="84"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-uw-Ssr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnGroesseAction:" destination="Xi2-VM-nKc" eventType="touchUpInside" id="6bJ-nF-fkX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VH9-XJ-1t3">
+                                                        <rect key="frame" x="0.0" y="30" width="67" height="54"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="54" id="BVs-wk-qop"/>
+                                                        </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="groesseCell" id="JCp-ua-FEO">
+                                                                <rect key="frame" x="0.0" y="28" width="67" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JCp-ua-FEO" id="Qj6-Cq-f9H">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="Xi2-VM-nKc" id="0Mr-4i-Llg"/>
+                                                            <outlet property="delegate" destination="Xi2-VM-nKc" id="MNn-fz-4xo"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FVG-4l-rvE">
+                                                <rect key="frame" x="204" y="413" width="67" height="84"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovz-vG-oBJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnFarbeAction:" destination="Xi2-VM-nKc" eventType="touchUpInside" id="PrJ-oC-rdV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Xs-iF-B2q">
+                                                        <rect key="frame" x="0.0" y="30" width="67" height="54"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="54" id="iF7-J3-PQ6"/>
+                                                        </constraints>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="farbeCell" id="Jul-Us-0MA">
+                                                                <rect key="frame" x="0.0" y="28" width="67" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jul-Us-0MA" id="SS2-2V-3x2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="67" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="Xi2-VM-nKc" id="JhD-Ba-uwX"/>
+                                                            <outlet property="delegate" destination="Xi2-VM-nKc" id="hx2-vo-bur"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -857,6 +929,10 @@
                         <outlet property="ArtikelDetailMaterial" destination="5Gu-mM-0qO" id="iT5-hV-vsD"/>
                         <outlet property="ArtikelDetailName" destination="bVi-1j-MWU" id="aVe-wH-T7A"/>
                         <outlet property="ArtikelDetailPreis" destination="h31-cE-cOm" id="wC2-S3-ycO"/>
+                        <outlet property="btnFarbe" destination="ovz-vG-oBJ" id="kai-yB-ooh"/>
+                        <outlet property="btnGroesse" destination="Rdd-uw-Ssr" id="377-nT-Mec"/>
+                        <outlet property="tblvFarbe" destination="8Xs-iF-B2q" id="ZVq-Xt-DjN"/>
+                        <outlet property="tblvGroesse" destination="VH9-XJ-1t3" id="uBD-01-o0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1156,10 +1232,10 @@
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
-        <image name="white - Icon - Location - 24px" width="24" height="24"/>
-        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AeY-Pq-TXX"/>
