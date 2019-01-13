@@ -12,11 +12,11 @@ import CoreData
 extension ArtikelEntity {
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ArtikelEntity>{
-        return NSFetchRequest<ArtikelEntity>(entityName: "ArtikelEntity") 
+        return NSFetchRequest<ArtikelEntity>(entityName: "ArtikelEntity")
     }
     
     @NSManaged public var name : String
-    @NSManaged public var preis : Double
+    @NSManaged public var preis : Double 
     @NSManaged public var anzahl : Int
     @NSManaged public var eigenschaften : String
     @NSManaged public var farbe : String
