@@ -729,8 +729,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-uO-Ynh">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="751"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-3o-Kyw">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="800"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-3o-Kyw">
+                                        <rect key="frame" x="0.0" y="13" width="320" height="800"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAx-rI-CVE">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="267"/>
@@ -772,6 +772,9 @@
                                                 <state key="normal" title="In den Warenkorb">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btnInWarenkorb:" destination="Xi2-VM-nKc" eventType="touchUpInside" id="Ujg-p6-Vwg"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5Q-oF-Pa0">
                                                 <rect key="frame" x="231" y="327" width="49" height="22"/>
@@ -1569,7 +1572,7 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="2897" height="2896"/>
+        <image name="Paket" width="695.280029296875" height="695"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
         <image name="fh_logo_transparent_final" width="3508" height="1405"/>
         <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
