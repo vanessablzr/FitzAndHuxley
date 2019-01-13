@@ -26,6 +26,8 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     
     var selectedArtikel: ArtikelEntity!
     
+    
+    
     @IBOutlet weak var ArtikelDetailImage: UIImageView!
     @IBOutlet weak var ArtikelDetailName: UILabel!
     @IBOutlet weak var ArtikelDetailPreis: UILabel!
@@ -39,8 +41,6 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         tblvGroesse.isHidden = true
         tblvFarbe.isHidden = true
         self.txtfldAnzahl.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     func setArtikelData(){
@@ -62,7 +62,6 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func btnGroesseAction(_ sender: Any) {
-        print("btnGroesse geklickt")
         if tblvGroesse.isHidden {
             animateBtnGroesse(toggle: true)
         } else {
@@ -71,7 +70,6 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnFarbeAction(_ sender: Any) {
-        print("buttonFarbe geklickt")
         if tblvFarbe.isHidden {
             animateBtnFarbe(toggle: true)
         } else {
@@ -81,12 +79,10 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     
     func animateBtnGroesse(toggle: Bool) {
         if toggle {
-            print("animateBtnGroesse if")
             UIView.animate(withDuration: 0.0){
                 self.tblvGroesse.isHidden = false
             }
         } else {
-            print("animateBtnGroesse else")
             UIView.animate(withDuration: 0.0){
                 self.tblvGroesse.isHidden = true
             }
@@ -94,12 +90,10 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     }
     func animateBtnFarbe(toggle: Bool) {
         if toggle {
-            print("animateBtnFarbe if")
             UIView.animate(withDuration: 0.0){
                 self.tblvFarbe.isHidden = false
             }
         } else {
-            print("animateBtnFarbe else")
             UIView.animate(withDuration: 0.0){
                 self.tblvFarbe.isHidden = true
             }
@@ -155,5 +149,3 @@ extension ArtikelDetailViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
 }
-
-//farbeCell
