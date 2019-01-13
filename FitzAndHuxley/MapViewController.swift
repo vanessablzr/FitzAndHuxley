@@ -79,14 +79,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         return annotationView
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.first!
-        
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 300000, longitudinalMeters: 300000)
-        
-        mapView.setRegion(coordinateRegion, animated: true)
-        locationManager.stopUpdatingLocation()
-    }
+//// Zoom an Standort
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        let location = locations.first!
+//
+//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: 300000, longitudinalMeters: 300000)
+//
+//        mapView.setRegion(coordinateRegion, animated: true)
+//        locationManager.stopUpdatingLocation()
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
