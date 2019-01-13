@@ -20,7 +20,6 @@ class WarenkorbTableViewCell: UITableViewCell {
     @IBOutlet weak var artikelAnzahl: UILabel!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
