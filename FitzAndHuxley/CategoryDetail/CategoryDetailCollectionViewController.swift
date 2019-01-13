@@ -19,9 +19,25 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchArtikel(modifier: subcategoryModifier)
+        title = setTitle(titleId: artikelArray[0].id)
 
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
+    }
+    
+    func setTitle (titleId: String) -> String {
+        switch titleId {
+        case "rucksack":
+            return "Rucksäcke"
+        case "armband":
+            return "Armbänder"
+        case "portemonnaie":
+            return "Portemonnaies"
+        case "weekender":
+            return "Weekender Bags"
+        default:
+            return "error"
+        }
     }
     
     func fetchArtikel(modifier: String){
