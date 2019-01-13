@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ArtikelDetailViewController: UIViewController {
+class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var btnGroesse: UIButton!
     @IBOutlet weak var tblvGroesse: UITableView!
@@ -17,6 +17,7 @@ class ArtikelDetailViewController: UIViewController {
     @IBOutlet weak var btnFarbe: UIButton!
     @IBOutlet weak var tblvFarbe: UITableView!
     
+    @IBOutlet weak var txtfldAnzahl: UITextField!
     
     var groesseArray = ["S", "M", "L"]
     var farbeArray = ["Rot", "Schwarz", "Blau", "Grau"]
@@ -37,6 +38,7 @@ class ArtikelDetailViewController: UIViewController {
         setArtikelData()
         tblvGroesse.isHidden = true
         tblvFarbe.isHidden = true
+        self.txtfldAnzahl.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -50,6 +52,12 @@ class ArtikelDetailViewController: UIViewController {
         ArtikelDetailPreis.text = preisLabel
         ArtikelDetailEigenschaft.text = selectedArtikel.eigenschaften
         ArtikelDetailMaterial.text = selectedArtikel.material
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        let characterSet = CharacterSet (charactersIn: string)
+        return allowedCharacters.isSuperset(of: characterSet)
     }
     
     

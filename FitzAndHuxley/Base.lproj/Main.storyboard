@@ -933,6 +933,7 @@
                         <outlet property="btnGroesse" destination="Rdd-uw-Ssr" id="377-nT-Mec"/>
                         <outlet property="tblvFarbe" destination="8Xs-iF-B2q" id="ZVq-Xt-DjN"/>
                         <outlet property="tblvGroesse" destination="VH9-XJ-1t3" id="uBD-01-o0V"/>
+                        <outlet property="txtfldAnzahl" destination="b5Q-oF-Pa0" id="BKg-Zo-Sik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
