@@ -42,6 +42,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         tblvFarbe.isHidden = true
         self.txtfldAnzahl.delegate = self
     }
+
     
     func setArtikelData(){
         let preis = selectedArtikel.preis
