@@ -651,7 +651,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Kategorie" image="white - Icon - Category - 24px" id="aMR-Mp-BTo"/>
-                    <navigationItem key="navigationItem" title="Kategorien" id="xOV-x4-Tgk"/>
+                    <navigationItem key="navigationItem" title="Kategorien" id="T8Y-55-WMY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -791,14 +791,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text text text text" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcU-qe-YYm">
-                                                <rect key="frame" x="15" y="542" width="297" height="45"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="0.40090000910000001" green="0.40090000910000001" blue="0.40090000910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text text text text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gu-mM-0qO">
-                                                <rect key="frame" x="15" y="624" width="297" height="53"/>
+                                                <rect key="frame" x="15" y="535" width="297" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.40090000910000001" green="0.40090000910000001" blue="0.40090000910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -883,6 +876,13 @@
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="text text text text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gu-mM-0qO">
+                                                <rect key="frame" x="15" y="617" width="297" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.40090000910000001" green="0.40090000910000001" blue="0.40090000910000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1297,10 +1297,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Startseite - Aktion" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-52-j4U">
-                                <rect key="frame" x="-54" y="80" width="477" height="412"/>
+                                <rect key="frame" x="-54" y="124" width="477" height="368"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xj4-vH-PZv">
-                                <rect key="frame" x="16" y="33" width="240" height="238"/>
+                                <rect key="frame" x="16" y="77" width="240" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERFÜGBAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN4-Pd-1op">
                                         <rect key="frame" x="8" y="94" width="203" height="41"/>
@@ -1549,16 +1549,16 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="695.280029296875" height="695"/>
+        <image name="Paket" width="2897" height="2896"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
-        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="fh_logo_transparent_final" width="1169" height="468"/>
+        <image name="white - Icon - Category - 24px" width="24" height="24"/>
+        <image name="white - Icon - Location - 24px" width="24" height="24"/>
+        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nHh-nK-czw"/>
-        <segue reference="VgI-VW-GFa"/>
+        <segue reference="ppj-qs-3Zo"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
