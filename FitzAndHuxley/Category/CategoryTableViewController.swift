@@ -52,16 +52,16 @@ class CategoryTableViewController: UITableViewController {
         let photoRucksack = UIImage(named: "grey - Icon (Kategorie) - Rucksack")
         let photoWeekenderBag = UIImage(named: "grey - Icon (Kategorie) - Weekender Bag")
         
-        guard let categoryBracelet = Category(categoryName: "armband", categoryPhoto: photoBracelet) else {
+        guard let categoryBracelet = Category(categoryName: "Armbänder", categoryPhoto: photoBracelet, categoryId: "armband") else {
             fatalError("Unable to instantiate categoryBracelet")
         }
-        guard let categoryPortemonnai = Category(categoryName: "portemonnaie", categoryPhoto: photoPortemonnai) else {
+        guard let categoryPortemonnai = Category(categoryName: "Portemonnaies", categoryPhoto: photoPortemonnai, categoryId: "portemonnaie") else {
             fatalError("Unable to instantiate categoryPortemonnai")
         }
-        guard let categoryRucksack = Category(categoryName: "rucksack", categoryPhoto: photoRucksack) else {
+        guard let categoryRucksack = Category(categoryName: "Rucksäcke", categoryPhoto: photoRucksack, categoryId: "rucksack") else {
             fatalError("Unable to instantiate categoryRucksack")
         }
-        guard let categoryWeekenderBag = Category(categoryName: "weekender", categoryPhoto: photoWeekenderBag) else {
+        guard let categoryWeekenderBag = Category(categoryName: "Weekender Bags", categoryPhoto: photoWeekenderBag, categoryId: "weekender") else {
             fatalError("Unable to instantiate categoryWeekenderBag")
         }
         
@@ -70,7 +70,7 @@ class CategoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        modifier = categoryArray[indexPath.row].categoryName
+        modifier = categoryArray[indexPath.row].categoryId
         return indexPath
     }
     
