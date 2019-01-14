@@ -11,6 +11,8 @@ import CoreData
 
 class BestelldatenViewController: UIViewController {
 
+    @IBOutlet weak var preisGesamt: UILabel!
+    
     @IBOutlet weak var userVorname: UILabel!
     @IBOutlet weak var userNachname: UILabel!
     @IBOutlet weak var userStrasse: UILabel!
@@ -22,6 +24,7 @@ class BestelldatenViewController: UIViewController {
     @IBOutlet weak var userKartendatum: UILabel!
     @IBOutlet weak var userKartennummer: UILabel!
     
+    var preis = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +37,6 @@ class BestelldatenViewController: UIViewController {
         self.userKarteninhaber.text = UserDefaults.standard.string(forKey: "kartenInhaber")
         self.userKartennummer.text = UserDefaults.standard.string(forKey: "kartenNummer")
         self.userKartendatum.text = UserDefaults.standard.string(forKey: "kartenDatum")
+        self.preisGesamt.text = preis
     }
 }

@@ -13,11 +13,10 @@ class WarenkorbTableViewCell: UITableViewCell {
 //    Outlets
     @IBOutlet weak var imageArtikel: UIImageView!
     @IBOutlet weak var nameArtikel: UILabel!
-    @IBOutlet weak var loeschenButton: UIButton!
-    @IBOutlet weak var preisArtikel: UILabel!
     @IBOutlet weak var artikelFarbe: UILabel!
     @IBOutlet weak var artikelGroesse: UILabel!
     @IBOutlet weak var artikelAnzahl: UILabel!
+    @IBOutlet weak var preisArtikel: UILabel!
     
     
     override func awakeFromNib() {

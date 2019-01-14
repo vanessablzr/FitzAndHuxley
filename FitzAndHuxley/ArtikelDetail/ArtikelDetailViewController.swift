@@ -86,6 +86,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btnInWarenkorb(_ sender: Any) {
         selectedAnzahl = txtfldAnzahl.text!
         createNewWarenkorbEntity()
+        print("btnInWarenkorb geklickt")
     }
     
     @IBAction func btnGroesseAction(_ sender: Any) {
