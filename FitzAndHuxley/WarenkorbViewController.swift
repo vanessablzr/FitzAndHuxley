@@ -42,7 +42,7 @@ class WarenkorbViewController: UIViewController {
     func calculateTotal(){
         var total = 0.0
         for currentArtikel in warenkorbArray {
-            total += currentArtikel.preis
+            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
         }
         let erg = "\(total)€"
         preisGesamt = erg
@@ -54,6 +54,32 @@ class WarenkorbViewController: UIViewController {
             bestelldaten?.preis = preisGesamt
         }
     }
+    
+    func increaseAnzahl(currentArtikel: WarenkorbEntity) {
+        var anzahl = 0
+        anzahl = Int(currentArtikel.anzahl!)!
+        anzahl += 1
+        let erg = "\(anzahl)"
+        currentArtikel.anzahl = erg
+    }
+    func decreaseAnzahl(currentArtikel: WarenkorbEntity) {
+        var anzahl = 0
+        anzahl = Int(currentArtikel.anzahl!)!
+        if anzahl >= 1 {
+        anzahl -= 1
+        }
+        let erg = "\(anzahl)"
+        currentArtikel.anzahl = erg
+    }
+    
+    @IBAction func anzahlMinus(_ sender: Any) {
+    }
+    
+    
+    @IBAction func anzahlPlus(_ sender: Any) {
+    }
+    
+    
     
 }
 extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
