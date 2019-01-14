@@ -26,8 +26,8 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
     
     var selectedArtikel: ArtikelEntity!
     
-    var selectedGroesse = ""
-    var selectedFarbe = ""
+    var selectedGroesse = "S"
+    var selectedFarbe = "Rot"
     var selectedAnzahl = "1"
     
     

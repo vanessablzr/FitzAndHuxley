@@ -1061,6 +1061,9 @@
                                 <state key="normal" title="Bestellung abschließen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishOrder:" destination="R7S-zT-I1Q" eventType="touchUpInside" id="GT3-sq-U3h"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gesamtsumme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-Rp-S1n">
                                 <rect key="frame" x="16" y="80" width="120" height="21"/>
