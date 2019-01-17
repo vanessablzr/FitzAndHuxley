@@ -38,21 +38,25 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func pressAnmelden(_ sender: Any) {
-        func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
-            if (emailTextfield.text == UserDefaults.standard.string(forKey: "email") && passwortTextfield.text == UserDefaults.standard.string(forKey: "passwort")){
-                return true
-                
-            } else {
-                let alert = UIAlertController(title: "Fehler", message: "Die Email stimmt nicht mit dem Passwort überein", preferredStyle: .alert)
-                
-                let ok = UIAlertAction(title: "Zurück", style: .default, handler: nil)
-                
-                alert.addAction(ok)
-                
-                self.present(alert, animated:  true, completion: nil)
-                return false
-            }
-        }
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "firstNavController") as! UINavigationController
+        self.present(newViewController, animated: true, completion: nil)
+//        func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
+//            if (emailTextfield.text == "" && passwortTextfield.text == "" {
+//                return true
+//
+//            } else {
+//                let alert = UIAlertController(title: "Fehler", message: "Die Email stimmt nicht mit dem Passwort überein", preferredStyle: .alert)
+//
+//                let ok = UIAlertAction(title: "Zurück", style: .default, handler: nil)
+//
+//                alert.addAction(ok)
+//
+//                self.present(alert, animated:  true, completion: nil)
+//                return false
+//            }
+//        }
     }
     
     
