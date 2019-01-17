@@ -718,9 +718,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="MAd-yd-BJE"/>
                     <navigationItem key="navigationItem" title="Title" id="7KR-3X-XqB">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="eix-ko-w8y"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="jrD-N7-KyV">
+                        <barButtonItem key="rightBarButtonItem" image="white - Icon - Shopping bag - 24px" id="CtU-ex-afs">
                             <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="OPQ-dq-n9I"/>
+                                <segue destination="buv-au-lmP" kind="show" id="cFw-7a-zbQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -923,9 +923,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1Vx-BK-A6C">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="AWi-dD-yQF"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="vNh-zg-KnE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="qWq-PU-9Bv">
                             <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="m8K-hD-YBA"/>
+                                <segue destination="buv-au-lmP" kind="show" id="DI0-jk-hUk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -942,8 +942,6 @@
                         <outlet property="tblvFarbe" destination="8Xs-iF-B2q" id="ZVq-Xt-DjN"/>
                         <outlet property="tblvGroesse" destination="VH9-XJ-1t3" id="uBD-01-o0V"/>
                         <outlet property="txtfldAnzahl" destination="b5Q-oF-Pa0" id="BKg-Zo-Sik"/>
-                        <outlet property="warenkorbButton" destination="YYZ-t3-lXu" id="JaZ-do-z1y"/>
-                        <outlet property="warenkorbIcon" destination="vNh-zg-KnE" id="m8Q-BQ-OF5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1598,7 +1596,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ppj-qs-3Zo"/>
-        <segue reference="m8K-hD-YBA"/>
+        <segue reference="DI0-jk-hUk"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

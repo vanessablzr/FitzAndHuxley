@@ -11,7 +11,7 @@ import CoreData
 
 class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var warenkorbIcon: UIBarButtonItem!
+   
     
     @IBOutlet weak var btnGroesse: UIButton!
     @IBOutlet weak var tblvGroesse: UITableView!
