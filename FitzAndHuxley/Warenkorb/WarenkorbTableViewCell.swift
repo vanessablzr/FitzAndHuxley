@@ -28,4 +28,7 @@ class WarenkorbTableViewCell: UITableViewCell {
 
     }
 
+    @IBAction func didIncreaseCount(_ sender: Any) {
+        
+    }
 }

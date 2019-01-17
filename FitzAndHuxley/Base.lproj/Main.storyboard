@@ -1016,6 +1016,7 @@
                                                     <state key="normal" title="+"/>
                                                     <connections>
                                                         <action selector="anzahlMinus:" destination="buv-au-lmP" eventType="touchUpInside" id="lVN-oK-adp"/>
+                                                        <action selector="didIncreaseCount:" destination="qxX-DZ-b4G" eventType="touchUpInside" id="cJz-5d-f7L"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-K4-d2Z">
@@ -1362,7 +1363,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgV-Pd-ufZ">
-                                        <rect key="frame" x="8" y="143" width="131" height="36"/>
+                                        <rect key="frame" x="8" y="143" width="147" height="36"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Jetzt durchstöbern">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1443,7 +1444,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bIY-AX-MKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="415" y="8"/>
+            <point key="canvasLocation" x="463" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x1e-1B-OuJ">

@@ -51,6 +51,9 @@ class BestelldatenViewController: UIViewController {
     }
     
     @IBAction func dismissSegue(segue: UIStoryboardSegue){
+        let tabbar = self.navigationController?.viewControllers[0] as! UITabBarController
+        tabbar.selectedIndex = 0
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
     
