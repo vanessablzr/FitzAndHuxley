@@ -134,21 +134,13 @@ class HomescreenViewController: UIViewController {
         }
     }
     
-//    func fetchDemoData() {
-//        let fetchRequest : NSFetchRequest =  NSFetchRequest<NSFetchRequestResult>(entityName: "ArtikelEntity")
-//        do {
-//            if let results = try self.appDelegate.coreDataStack.managedObjectContext.fetch(fetchRequest) as? [NSManagedObject] {
-//                let _: [ArtikelEntity]? = results as? [ArtikelEntity]
-//                if fetchedArtikel != nil {
-//                    self.artikel = fetchedArtikel!
-//                }
-//            }
-//        }
-//        catch {
-//            fatalError("fetch error")
-//        }
-//    }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is CategoryDetailCollectionViewController {
+            let subcategories = segue.destination as? CategoryDetailCollectionViewController
+            subcategories?.subcategoryModifier = "rucksack"
+        }
+    }
+    
 }
 
 
