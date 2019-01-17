@@ -18,6 +18,7 @@ class HomescreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.title = "Home"
         let firstStart : Bool? = UserDefaults.standard.object(forKey: "firstStart") as? Bool
         
         if firstStart == nil {

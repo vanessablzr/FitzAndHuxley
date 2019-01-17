@@ -24,6 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.title = "Standorte"
         self.mapView.delegate = self
         mapView.showsUserLocation = true
         self.locationManager = CLLocationManager()
