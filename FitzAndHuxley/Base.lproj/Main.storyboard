@@ -779,6 +779,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="btnInWarenkorb:" destination="Xi2-VM-nKc" eventType="touchUpInside" id="Ujg-p6-Vwg"/>
+                                                    <action selector="pressInWarenkorb:" destination="Xi2-VM-nKc" eventType="touchUpInside" id="qhg-Rb-XjE"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5Q-oF-Pa0">
@@ -941,6 +942,8 @@
                         <outlet property="tblvFarbe" destination="8Xs-iF-B2q" id="ZVq-Xt-DjN"/>
                         <outlet property="tblvGroesse" destination="VH9-XJ-1t3" id="uBD-01-o0V"/>
                         <outlet property="txtfldAnzahl" destination="b5Q-oF-Pa0" id="BKg-Zo-Sik"/>
+                        <outlet property="warenkorbButton" destination="YYZ-t3-lXu" id="JaZ-do-z1y"/>
+                        <outlet property="warenkorbIcon" destination="vNh-zg-KnE" id="m8Q-BQ-OF5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
