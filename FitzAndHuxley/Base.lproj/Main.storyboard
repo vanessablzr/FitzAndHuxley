@@ -601,7 +601,7 @@
         <!--Kategorien-->
         <scene sceneID="nrh-z8-d6Y">
             <objects>
-                <tableViewController title="Kategorien" id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwl-S2-iOt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,16 +651,14 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Kategorie" image="white - Icon - Category - 24px" id="aMR-Mp-BTo"/>
-                    <navigationItem key="navigationItem" title="Kategorien" id="T8Y-55-WMY">
-                        <barButtonItem key="backBarButtonItem" title="Zurück" id="pLa-TG-lIz"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Kategorien" id="T8Y-55-WMY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2085" y="921"/>
         </scene>
-        <!--Title-->
+        <!--Category Detail Collection View Controller-->
         <scene sceneID="q9Q-J4-ekp">
             <objects>
                 <collectionViewController id="akE-oB-NQZ" customClass="CategoryDetailCollectionViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
@@ -715,20 +713,12 @@
                             <outlet property="delegate" destination="akE-oB-NQZ" id="tPR-UW-KiO"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Title" id="XdU-xU-oeK">
-                        <barButtonItem key="backBarButtonItem" title="Zurück" id="m0l-cE-4dA"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="dh7-24-I2Q">
-                            <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="2wM-P7-IVX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihg-6v-SnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3157.5" y="695.07042253521126"/>
         </scene>
-        <!--Title-->
+        <!--Artikel Detail View Controller-->
         <scene sceneID="iy3-IG-Muj">
             <objects>
                 <viewController id="Xi2-VM-nKc" customClass="ArtikelDetailViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
@@ -918,14 +908,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H4e-Fc-mxo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="hFq-lF-5fs">
-                        <barButtonItem key="backBarButtonItem" title="Zurück" id="F16-aS-vHm"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="VqF-Mj-9Ge">
-                            <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="coi-jL-S8J"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
@@ -1193,7 +1175,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6544 4299 2923 8867" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F61-Nz-m0B">
-                                <rect key="frame" x="16" y="344" width="215" height="21"/>
+                                <rect key="frame" x="16" y="344" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1324,10 +1306,10 @@
             </objects>
             <point key="canvasLocation" x="2085" y="-685"/>
         </scene>
-        <!--Home-->
+        <!--Homescreen-->
         <scene sceneID="8bs-l8-eCC">
             <objects>
-                <viewController id="82Q-mG-ixj" customClass="HomescreenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Homescreen" title="Homescreen" id="82Q-mG-ixj" customClass="HomescreenViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5RC-Nn-QcB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1443,7 +1425,7 @@
         <!--Navigation Controller-->
         <scene sceneID="x1e-1B-OuJ">
             <objects>
-                <navigationController id="bY1-bq-8v4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="firstNavController" id="bY1-bq-8v4" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XNN-tC-zXS">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1463,10 +1445,10 @@
             </objects>
             <point key="canvasLocation" x="-315" y="7"/>
         </scene>
-        <!--Anmelden-->
+        <!--toHomescreen-->
         <scene sceneID="FGH-mF-usH">
             <objects>
-                <viewController id="yAn-58-38Y" customClass="LogInViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="toHomescreen" id="yAn-58-38Y" customClass="LogInViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mc-1a-2Gq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1483,7 +1465,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressAnmelden:" destination="yAn-58-38Y" eventType="touchUpInside" id="9aO-Nq-IJY"/>
-                                    <segue destination="bY1-bq-8v4" kind="show" id="k32-Yf-Ipe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noch keinen Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdl-7p-oUk">
@@ -1585,17 +1566,15 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="2897" height="2896"/>
+        <image name="Paket" width="695.280029296875" height="695"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
-        <image name="white - Icon - Location - 24px" width="24" height="24"/>
-        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k32-Yf-Ipe"/>
         <segue reference="ppj-qs-3Zo"/>
-        <segue reference="coi-jL-S8J"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
