@@ -39,7 +39,7 @@ class LogInViewController: UIViewController {
     
     @IBAction func pressAnmelden(_ sender: Any) {
         if ((emailTextfield.text?.isEmpty)! || (passwortTextfield.text?.isEmpty)!){
-            let alert = UIAlertController(title: "Fehler", message: "Die Email stimmt nicht mit dem Passwort überein", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Fehler", message: "Bitte füllen Sie die vorangegebenen Felder aus", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Zurück", style: .default, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated:  true, completion: nil)

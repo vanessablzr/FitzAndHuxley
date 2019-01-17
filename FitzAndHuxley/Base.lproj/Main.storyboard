@@ -718,9 +718,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="MAd-yd-BJE"/>
                     <navigationItem key="navigationItem" title="Title" id="7KR-3X-XqB">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="eix-ko-w8y"/>
-                        <barButtonItem key="rightBarButtonItem" image="white - Icon - Shopping bag - 24px" id="CtU-ex-afs">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="jrD-N7-KyV">
                             <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="cFw-7a-zbQ"/>
+                                <segue destination="buv-au-lmP" kind="show" id="OPQ-dq-n9I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -923,9 +923,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1Vx-BK-A6C">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="AWi-dD-yQF"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="qWq-PU-9Bv">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="vNh-zg-KnE">
                             <connections>
-                                <segue destination="buv-au-lmP" kind="show" id="DI0-jk-hUk"/>
+                                <segue destination="buv-au-lmP" kind="show" id="m8K-hD-YBA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1102,6 +1102,7 @@
                                 </state>
                                 <connections>
                                     <action selector="finishOrder:" destination="R7S-zT-I1Q" eventType="touchUpInside" id="GT3-sq-U3h"/>
+                                    <segue destination="A3V-dt-8z1" kind="presentation" id="M1R-dg-VrR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gesamtsumme:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-Rp-S1n">
@@ -1280,7 +1281,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="82Q-mG-ixj" kind="show" id="VgI-VW-GFa"/>
+                                    <segue destination="z9L-Bh-TBi" kind="unwind" unwindAction="dismissSegueWithSegue:" id="4ms-p4-LXc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1289,6 +1290,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbB-hh-bhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z9L-Bh-TBi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2085" y="-1361"/>
         </scene>
@@ -1587,16 +1589,15 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="695.280029296875" height="695"/>
+        <image name="Paket" width="2897" height="2896"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
-        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="fh_logo_transparent_final" width="1169" height="468"/>
+        <image name="white - Icon - Category - 24px" width="24" height="24"/>
+        <image name="white - Icon - Location - 24px" width="24" height="24"/>
+        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ppj-qs-3Zo"/>
-        <segue reference="DI0-jk-hUk"/>
+        <segue reference="m8K-hD-YBA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

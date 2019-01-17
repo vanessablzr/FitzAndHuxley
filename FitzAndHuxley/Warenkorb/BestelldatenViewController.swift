@@ -50,6 +50,10 @@ class BestelldatenViewController: UIViewController {
         deleteWarenkorbartikel()
     }
     
+    @IBAction func dismissSegue(segue: UIStoryboardSegue){
+        
+    }
+    
     
     func fetchArtikel(){
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "WarenkorbEntity")
