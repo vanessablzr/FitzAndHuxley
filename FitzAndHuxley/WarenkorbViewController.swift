@@ -22,6 +22,7 @@ class WarenkorbViewController: UIViewController {
         fetchArtikel()
         calculateTotal()
         gesamtSumme.text = preisGesamt
+        tableView.tableFooterView = UIView()
     }
     
     func fetchArtikel(){
@@ -46,6 +47,22 @@ class WarenkorbViewController: UIViewController {
         }
         let erg = "\(total)€"
         preisGesamt = erg
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (identifier == "toBestellen" && warenkorbArray.count == 0) {
+            
+            let alert = UIAlertController(title: "Fehler", message: "Der Warenkorb ist leer", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Zurück", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated:  true, completion: nil)
+            
+            return false
+        } else if (identifier == "toBestellen" && warenkorbArray.count != 0) {
+            return true
+        } else {
+            return false
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

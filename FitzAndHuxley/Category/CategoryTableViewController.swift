@@ -16,6 +16,7 @@ class CategoryTableViewController: UITableViewController {
         super.viewDidLoad()
         loadCategories()
         self.tabBarController?.navigationItem.title = "Kategorien"
+        tableView.tableFooterView = UIView()
 
     }
 

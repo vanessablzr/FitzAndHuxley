@@ -1064,7 +1064,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="R7S-zT-I1Q" kind="show" id="ddf-t8-1Ws"/>
+                                    <segue destination="R7S-zT-I1Q" kind="show" identifier="toBestellen" id="ddf-t8-1Ws"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1586,12 +1586,12 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="2897" height="2896"/>
+        <image name="Paket" width="695.280029296875" height="695"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="1169" height="468"/>
-        <image name="white - Icon - Category - 24px" width="24" height="24"/>
-        <image name="white - Icon - Location - 24px" width="24" height="24"/>
-        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
+        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
+        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ppj-qs-3Zo"/>
