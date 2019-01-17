@@ -601,7 +601,7 @@
         <!--Kategorien-->
         <scene sceneID="nrh-z8-d6Y">
             <objects>
-                <tableViewController id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Kategorien" id="x2n-Tb-yhe" customClass="CategoryTableViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mwl-S2-iOt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,14 +651,16 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Kategorie" image="white - Icon - Category - 24px" id="aMR-Mp-BTo"/>
-                    <navigationItem key="navigationItem" title="Kategorien" id="T8Y-55-WMY"/>
+                    <navigationItem key="navigationItem" title="Kategorien" id="T8Y-55-WMY">
+                        <barButtonItem key="backBarButtonItem" title="Zurück" id="pLa-TG-lIz"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO0-yf-53h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2085" y="921"/>
         </scene>
-        <!--Category Detail Collection View Controller-->
+        <!--Title-->
         <scene sceneID="q9Q-J4-ekp">
             <objects>
                 <collectionViewController id="akE-oB-NQZ" customClass="CategoryDetailCollectionViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
@@ -713,12 +715,20 @@
                             <outlet property="delegate" destination="akE-oB-NQZ" id="tPR-UW-KiO"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="XdU-xU-oeK">
+                        <barButtonItem key="backBarButtonItem" title="Zurück" id="m0l-cE-4dA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="dh7-24-I2Q">
+                            <connections>
+                                <segue destination="buv-au-lmP" kind="show" id="2wM-P7-IVX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihg-6v-SnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3157.5" y="695.07042253521126"/>
         </scene>
-        <!--Artikel Detail View Controller-->
+        <!--Title-->
         <scene sceneID="iy3-IG-Muj">
             <objects>
                 <viewController id="Xi2-VM-nKc" customClass="ArtikelDetailViewController" customModule="FitzAndHuxley" customModuleProvider="target" sceneMemberID="viewController">
@@ -908,6 +918,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H4e-Fc-mxo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="hFq-lF-5fs">
+                        <barButtonItem key="backBarButtonItem" title="Zurück" id="F16-aS-vHm"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="VqF-Mj-9Ge">
+                            <connections>
+                                <segue destination="buv-au-lmP" kind="show" id="coi-jL-S8J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="800"/>
                     <connections>
@@ -1465,7 +1483,7 @@
                                 </state>
                                 <connections>
                                     <action selector="pressAnmelden:" destination="yAn-58-38Y" eventType="touchUpInside" id="9aO-Nq-IJY"/>
-                                    <segue destination="bY1-bq-8v4" kind="show" id="AeY-Pq-TXX"/>
+                                    <segue destination="bY1-bq-8v4" kind="show" id="k32-Yf-Ipe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noch keinen Account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdl-7p-oUk">
@@ -1567,16 +1585,17 @@
     </scenes>
     <resources>
         <image name="BarItemIconHome-1" width="24" height="24"/>
-        <image name="Paket" width="695.280029296875" height="695"/>
+        <image name="Paket" width="2897" height="2896"/>
         <image name="Startseite - Aktion" width="2048" height="1365"/>
-        <image name="fh_logo_transparent_final" width="3508" height="1405"/>
-        <image name="white - Icon - Category - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Location - 24px" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="white - Icon - Shopping bag - 24px" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="fh_logo_transparent_final" width="1169" height="468"/>
+        <image name="white - Icon - Category - 24px" width="24" height="24"/>
+        <image name="white - Icon - Location - 24px" width="24" height="24"/>
+        <image name="white - Icon - Shopping bag - 24px" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nHh-nK-czw"/>
+        <segue reference="k32-Yf-Ipe"/>
         <segue reference="ppj-qs-3Zo"/>
+        <segue reference="coi-jL-S8J"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

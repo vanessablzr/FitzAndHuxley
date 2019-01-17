@@ -15,7 +15,7 @@ class CategoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCategories()
-        title = "Kategorien"
+        self.tabBarController?.navigationItem.title = "Kategorien"
 
     }
 
