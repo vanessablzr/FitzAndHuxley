@@ -32,7 +32,7 @@ class ZahlungsViewController: UIViewController {
             if (karteninhaberTextfield.text != "" && kartennummerTextfield.text != "" && kartenDatumTextfield.text != "" && CvvTextfield.text != "") {
                 
             defaults.setValue(karteninhaberTextfield.text, forKey: "kartenInhaber")
-            defaults.setValue(kartennummerTextfield.text, forKey: "kartenNummer")
+            defaults.setValue(kartennummerTextfield.text, forKey: "kartenNr")
             defaults.setValue(kartenDatumTextfield.text, forKey: "kartenDatum")
             defaults.setValue(CvvTextfield.text, forKey: "kartenCvv")
                 
