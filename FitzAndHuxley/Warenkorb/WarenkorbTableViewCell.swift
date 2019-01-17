@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import NotificationCenter
 
 class WarenkorbTableViewCell: UITableViewCell {
     
@@ -18,17 +20,43 @@ class WarenkorbTableViewCell: UITableViewCell {
     @IBOutlet weak var artikelAnzahl: UILabel!
     @IBOutlet weak var preisArtikel: UILabel!
     
+
+    
+    var artikel: WarenkorbEntity!
+    var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+        super.awakeFromNib()        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
+    
+    
 
     @IBAction func didIncreaseCount(_ sender: Any) {
-        
+        var anzahl = 0
+        anzahl = Int(artikel.anzahl!)!
+        anzahl += 1
+        let erg = "\(anzahl)"
+        artikel.anzahl = erg
+        artikelAnzahl.text = erg
+        self.appDelegate.coreDataStack.saveContext()
+
+    }
+    @IBAction func didDecreaseCount(_ sender: Any) {
+        var anzahl = 0
+        anzahl = Int(artikel.anzahl!)!
+        if anzahl >= 1 {
+            anzahl -= 1
+        }
+        let erg = "\(anzahl)"
+        artikel.anzahl = erg
+        artikelAnzahl.text = erg
+        self.appDelegate.coreDataStack.saveContext()
+
     }
 }
