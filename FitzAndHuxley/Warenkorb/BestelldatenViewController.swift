@@ -39,7 +39,7 @@ class BestelldatenViewController: UIViewController {
         self.userPlz.text = UserDefaults.standard.string(forKey: "lieferPlz")
         self.userStadt.text = UserDefaults.standard.string(forKey: "lieferStadt")
         self.userKarteninhaber.text = UserDefaults.standard.string(forKey: "kartenInhaber")
-        self.userKartennummer.text = UserDefaults.standard.string(forKey: "kartenNummer")
+        self.userKartennummer.text = UserDefaults.standard.string(forKey: "kartenNr")
         self.userKartendatum.text = UserDefaults.standard.string(forKey: "kartenDatum")
         self.preisGesamt.text = preis
         
