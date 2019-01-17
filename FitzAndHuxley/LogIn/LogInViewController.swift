@@ -52,22 +52,10 @@ class LogInViewController: UIViewController {
             
         }
     }
-    
-//    present ViewCOntroller from Code
+
    
     @IBAction func pressRegistrieren(_ sender: Any) {
-        self.performSegue(withIdentifier: "toRegistrierenscreen", sender: nil)
     }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toHomescreen" {
-//
-//        }
-//        else {
-//
-//        }
-//    }
 }
     
 
