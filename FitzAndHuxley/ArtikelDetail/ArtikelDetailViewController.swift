@@ -11,6 +11,8 @@ import CoreData
 
 class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var warenkorbIcon: UIBarButtonItem!
+    
     @IBOutlet weak var btnGroesse: UIButton!
     @IBOutlet weak var tblvGroesse: UITableView!
     
@@ -45,7 +47,11 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         tblvGroesse.isHidden = true
         tblvFarbe.isHidden = true
         self.txtfldAnzahl.delegate = self
+        
+        
     }
+    
+    
 // erstellt Artikel für Warenkorb
     func createNewWarenkorbEntity() {
         let warenkorbEntity: NSEntityDescription? = NSEntityDescription.entity(forEntityName: "WarenkorbEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
@@ -131,6 +137,10 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+//    Animation des Warenkorb Icon beim Einfügen
+    @IBAction func pressInWarenkorb(_ sender: Any) {
+        
+    }
 }
 
 
@@ -182,5 +192,7 @@ extension ArtikelDetailViewController: UITableViewDelegate, UITableViewDataSourc
         
         
     }
+    
+    
     
 }
