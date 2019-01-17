@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import NotificationCenter
 
 class WarenkorbViewController: UIViewController {
     
@@ -47,6 +48,10 @@ class WarenkorbViewController: UIViewController {
         }
         let erg = "\(total)€"
         preisGesamt = erg
+    }
+    
+    func refreshWarenkorb () {
+        self.tableView.reloadData()
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -117,6 +122,7 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         cell.nameArtikel.text = currentArtikel.name
         cell.preisArtikel.text = preisLabel
         cell.imageArtikel.image = UIImage(named: currentArtikel.image!)
+        cell.artikel = currentArtikel
         
         return cell
     }

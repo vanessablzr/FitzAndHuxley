@@ -946,7 +946,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4220.625" y="695.07042253521126"/>
+            <point key="canvasLocation" x="4313" y="719"/>
         </scene>
         <!--Warenkorb-->
         <scene sceneID="sBe-gC-anO">
@@ -1007,6 +1007,7 @@
                                                     <state key="normal" title="-"/>
                                                     <connections>
                                                         <action selector="anzahlPlus:" destination="buv-au-lmP" eventType="touchUpInside" id="y5a-Tg-3hD"/>
+                                                        <action selector="didDecreaseCount:" destination="qxX-DZ-b4G" eventType="touchUpInside" id="2hI-eO-4za"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbP-Ed-LU9">
