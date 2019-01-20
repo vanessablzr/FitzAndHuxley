@@ -10,11 +10,9 @@ import UIKit
 import CoreData
 import NotificationCenter
 
-protocol updateTotal {
-    func calculateTotal()
-}
 
-class WarenkorbViewController: UIViewController, updateTotal {
+
+class WarenkorbViewController: UIViewController {
     
     var warenkorbArray : [WarenkorbEntity] = []
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -47,14 +45,14 @@ class WarenkorbViewController: UIViewController, updateTotal {
     }
     
 //    Berechnet den Gesamtwert des Warenkorbs
-    func calculateTotal(){
-        var total = 0.0
-        for currentArtikel in warenkorbArray {
-            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
-        }
-        let erg = "\(total)€"
-        preisGesamt = erg
-    }
+//    func calculateTotal(){
+//        var total = 0.0
+//        for currentArtikel in warenkorbArray {
+//            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
+//        }
+//        let erg = "\(total)€"
+//        preisGesamt = erg
+//    }
     
 //    Überprüfung ob Warenkorb leer ist.
 //    Gibt Fehler falls der Warenkorb leer ist und verhindert den Bestellvorgang
@@ -111,6 +109,8 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         cell.imageArtikel.image = UIImage(named: currentArtikel.image!)
         cell.artikel = currentArtikel
         
+        cell.delegate = self
+        
         return cell
     }
     
@@ -132,5 +132,16 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         
     }
     
+}
+
+extension WarenkorbViewController: refreshTotal {
+    func calculateTotal(){
+        var total = 0.0
+        for currentArtikel in warenkorbArray {
+            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
+        }
+        let erg = "\(total)€"
+        preisGesamt = erg
+    }
 }
 
