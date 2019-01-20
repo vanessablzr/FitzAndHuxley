@@ -10,7 +10,11 @@ import UIKit
 import CoreData
 import NotificationCenter
 
-class WarenkorbViewController: UIViewController {
+protocol updateTotal {
+    func calculateTotal()
+}
+
+class WarenkorbViewController: UIViewController, updateTotal {
     
     var warenkorbArray : [WarenkorbEntity] = []
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -26,6 +30,7 @@ class WarenkorbViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
+//    Holt alle Warenkorbartikel
     func fetchArtikel(){
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "WarenkorbEntity")
         do {
@@ -41,6 +46,7 @@ class WarenkorbViewController: UIViewController {
         }
     }
     
+//    Berechnet den Gesamtwert des Warenkorbs
     func calculateTotal(){
         var total = 0.0
         for currentArtikel in warenkorbArray {
@@ -50,10 +56,8 @@ class WarenkorbViewController: UIViewController {
         preisGesamt = erg
     }
     
-    func refreshWarenkorb () {
-        self.tableView.reloadData()
-    }
-    
+//    Überprüfung ob Warenkorb leer ist.
+//    Gibt Fehler falls der Warenkorb leer ist und verhindert den Bestellvorgang
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if (identifier == "toBestellen" && warenkorbArray.count == 0) {
             
@@ -75,23 +79,6 @@ class WarenkorbViewController: UIViewController {
             let bestelldaten = segue.destination as? BestelldatenViewController
             bestelldaten?.preis = preisGesamt
         }
-    }
-    
-    func increaseAnzahl(currentArtikel: WarenkorbEntity) {
-        var anzahl = 0
-        anzahl = Int(currentArtikel.anzahl!)!
-        anzahl += 1
-        let erg = "\(anzahl)"
-        currentArtikel.anzahl = erg
-    }
-    func decreaseAnzahl(currentArtikel: WarenkorbEntity) {
-        var anzahl = 0
-        anzahl = Int(currentArtikel.anzahl!)!
-        if anzahl >= 1 {
-        anzahl -= 1
-        }
-        let erg = "\(anzahl)"
-        currentArtikel.anzahl = erg
     }
     
     @IBAction func anzahlMinus(_ sender: Any) {

@@ -25,6 +25,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
         self.collectionView.delegate = self
     }
     
+//    setzt den Titel
     func setTitle (titleId: String) -> String {
         switch titleId {
         case "rucksack":
@@ -40,6 +41,7 @@ class CategoryDetailCollectionViewController: UICollectionViewController {
         }
     }
     
+//    Holt alle Artikel mit dem jeweiligen modifier, der vom CategoryTableViewController gesetzt wurde
     func fetchArtikel(modifier: String){
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ArtikelEntity")
         fetchRequest.predicate = NSPredicate(format: "id == %@", modifier)

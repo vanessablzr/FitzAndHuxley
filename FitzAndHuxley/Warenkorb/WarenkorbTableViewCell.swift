@@ -25,6 +25,9 @@ class WarenkorbTableViewCell: UITableViewCell {
     var artikel: WarenkorbEntity!
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    var delegate: updateTotal?
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()        
@@ -45,6 +48,7 @@ class WarenkorbTableViewCell: UITableViewCell {
         artikel.anzahl = erg
         artikelAnzahl.text = erg
         self.appDelegate.coreDataStack.saveContext()
+        self.delegate?.calculateTotal()
 
     }
     @IBAction func didDecreaseCount(_ sender: Any) {
@@ -57,6 +61,7 @@ class WarenkorbTableViewCell: UITableViewCell {
         artikel.anzahl = erg
         artikelAnzahl.text = erg
         self.appDelegate.coreDataStack.saveContext()
+        self.delegate?.calculateTotal()
 
     }
 }
