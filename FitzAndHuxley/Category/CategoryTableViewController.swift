@@ -20,8 +20,6 @@ class CategoryTableViewController: UITableViewController {
 
     }
 
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,7 +45,7 @@ class CategoryTableViewController: UITableViewController {
     }
  
 
-    
+//    erstellt das Array mit den Kategorien und füllt es mit den einzelnen Kateogrien
     private func loadCategories(){
         let photoBracelet = UIImage(named: "grey - Icon (Kategorie) - Bracelet")
         let photoPortemonnai = UIImage(named: "grey - Icon (Kategorie) - Portemonnai")

@@ -46,7 +46,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
         super.didReceiveMemoryWarning()
     }
     
-    // Erstellen Ielen für Picker
+    // Erstellen der Komponenten für Picker
     func numberOfComponents(in pickerView: UIPickerView) ->Int {
     return 2
     }
@@ -57,10 +57,6 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
     
     // Capture the picker view selection
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//       selectedFarbe = pickerData[component][row]
-//        print("seletedFarbe")
-//        selectedGroesse = pickerData[component][row]
-//        print("selectedGroesse")
         if component == 0 {
             selectedFarbe = pickerData[0][row]
         }
@@ -109,7 +105,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
     }
     
     
-// beim Klick auf den Button wird ein neuer Warenkorbartikel erstellt mit der angegebenen Anzahl
+// beim Klick auf den Button wird ein neuer Warenkorbartikel mit der angegebenen Anzahl erstellt
     @IBAction func btnInWarenkorb(_ sender: Any) {
         if (txtfldAnzahl.text?.isEmpty)! {
             selectedAnzahl = "1"

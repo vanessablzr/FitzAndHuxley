@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import NotificationCenter
 
+
+
 class WarenkorbViewController: UIViewController {
     
     var warenkorbArray : [WarenkorbEntity] = []
@@ -26,6 +28,7 @@ class WarenkorbViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
     
+//    Holt alle Warenkorbartikel
     func fetchArtikel(){
         let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "WarenkorbEntity")
         do {
@@ -41,19 +44,18 @@ class WarenkorbViewController: UIViewController {
         }
     }
     
-    func calculateTotal(){
-        var total = 0.0
-        for currentArtikel in warenkorbArray {
-            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
-        }
-        let erg = "\(total)€"
-        preisGesamt = erg
-    }
+//    Berechnet den Gesamtwert des Warenkorbs
+//    func calculateTotal(){
+//        var total = 0.0
+//        for currentArtikel in warenkorbArray {
+//            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
+//        }
+//        let erg = "\(total)€"
+//        preisGesamt = erg
+//    }
     
-    func refreshWarenkorb () {
-        self.tableView.reloadData()
-    }
-    
+//    Überprüfung ob Warenkorb leer ist.
+//    Gibt Fehler falls der Warenkorb leer ist und verhindert den Bestellvorgang
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if (identifier == "toBestellen" && warenkorbArray.count == 0) {
             
@@ -75,23 +77,6 @@ class WarenkorbViewController: UIViewController {
             let bestelldaten = segue.destination as? BestelldatenViewController
             bestelldaten?.preis = preisGesamt
         }
-    }
-    
-    func increaseAnzahl(currentArtikel: WarenkorbEntity) {
-        var anzahl = 0
-        anzahl = Int(currentArtikel.anzahl!)!
-        anzahl += 1
-        let erg = "\(anzahl)"
-        currentArtikel.anzahl = erg
-    }
-    func decreaseAnzahl(currentArtikel: WarenkorbEntity) {
-        var anzahl = 0
-        anzahl = Int(currentArtikel.anzahl!)!
-        if anzahl >= 1 {
-        anzahl -= 1
-        }
-        let erg = "\(anzahl)"
-        currentArtikel.anzahl = erg
     }
     
     @IBAction func anzahlMinus(_ sender: Any) {
@@ -124,6 +109,8 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         cell.imageArtikel.image = UIImage(named: currentArtikel.image!)
         cell.artikel = currentArtikel
         
+        cell.delegate = self
+        
         return cell
     }
     
@@ -145,5 +132,16 @@ extension WarenkorbViewController : UITableViewDelegate, UITableViewDataSource {
         
     }
     
+}
+
+extension WarenkorbViewController: refreshTotal {
+    func calculateTotal(){
+        var total = 0.0
+        for currentArtikel in warenkorbArray {
+            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
+        }
+        let erg = "\(total)€"
+        preisGesamt = erg
+    }
 }
 

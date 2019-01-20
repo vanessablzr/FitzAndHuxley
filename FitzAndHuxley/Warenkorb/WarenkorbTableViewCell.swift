@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 import NotificationCenter
 
+protocol refreshTotal {
+    func calculateTotal()
+}
+
 class WarenkorbTableViewCell: UITableViewCell {
     
 //    Outlets
@@ -24,6 +28,9 @@ class WarenkorbTableViewCell: UITableViewCell {
     
     var artikel: WarenkorbEntity!
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+//    var delegate: updateTotal?
+    var delegate: refreshTotal!
     
     
     override func awakeFromNib() {
@@ -45,6 +52,7 @@ class WarenkorbTableViewCell: UITableViewCell {
         artikel.anzahl = erg
         artikelAnzahl.text = erg
         self.appDelegate.coreDataStack.saveContext()
+        delegate.calculateTotal()
 
     }
     @IBAction func didDecreaseCount(_ sender: Any) {
@@ -57,6 +65,7 @@ class WarenkorbTableViewCell: UITableViewCell {
         artikel.anzahl = erg
         artikelAnzahl.text = erg
         self.appDelegate.coreDataStack.saveContext()
+        delegate.calculateTotal()
 
     }
 }
