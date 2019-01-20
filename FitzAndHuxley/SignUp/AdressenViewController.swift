@@ -28,8 +28,12 @@ class AdressenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        Stimmt Lieferadresse mit Rechnungsadresse überein, werden die Rechnungsdatenfelder nicht angezeigt
         rechnungsView.isHidden = true
     }
+    
+//    Erst durch ausfüllen der Felder wird der Benutzer auf den nächsten Screen geführt
+//    Alle Daten zur Liefer bzw. Rechnungsadresse werden in den User Defaults gespeichert
     
     override func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
         
@@ -86,6 +90,7 @@ class AdressenViewController: UIViewController {
         
     }
     
+//    Methode um die Rechnungsfelder anzuzeigen
     @IBAction func turnSwitch(_ sender: Any) {
         if (switchUi.isOn){
             rechnungsView.isHidden = true

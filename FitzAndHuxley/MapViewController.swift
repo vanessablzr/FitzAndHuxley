@@ -65,6 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.addAnnotation(pinBerlin)
     }
     
+//    Einfügen der drei Standorte in die MapView
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if !(annotation is MKAnnotationView){
             return nil

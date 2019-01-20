@@ -21,11 +21,13 @@ class ZahlungsViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         eingabeFelderView.isHidden = false
     }
+    
+//    Daten zur Bezahlung werden in UserDefaults gespeichert
+//    Erst nach Ausfüllung der Felder wird der benutzer weitergeleitet
     
     override func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
             

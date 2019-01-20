@@ -36,7 +36,7 @@ class LogInViewController: UIViewController {
         UserDefaults.standard.set("123", forKey: "kartenCvv")
     }
     
-    
+//    Prüfung, ob Benutzer die Felder ausgefüllt hat
     @IBAction func pressAnmelden(_ sender: Any) {
         if ((emailTextfield.text?.isEmpty)! || (passwortTextfield.text?.isEmpty)!){
             let alert = UIAlertController(title: "Fehler", message: "Bitte füllen Sie die vorangegebenen Felder aus", preferredStyle: .alert)

@@ -11,8 +11,6 @@ import CoreData
 
 class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-
-    
     @IBOutlet weak var picker: UIPickerView!
     
     var pickerData : [[String]] = [[String]]()

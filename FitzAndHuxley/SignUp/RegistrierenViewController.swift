@@ -23,7 +23,8 @@ class RegistrierenViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
+// Benutzer ist gezwungen die vorangegebenen Felder auszufüllen, um fortzufahren
+//  Eingegebene Daten werden in UserDefaults gespeichert zur Bestellabwicklung
     override func shouldPerformSegue(withIdentifier: String, sender: Any?) -> Bool {
                 
                 if (vornameTextfield.text != "" && nachnameTextfield.text != "" &&
