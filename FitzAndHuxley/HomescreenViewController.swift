@@ -28,7 +28,7 @@ class HomescreenViewController: UIViewController {
         
     }
     
-//  Aufruf des Homescreens erstellt alle Artikel für die App
+//  Aufruf des Homescreens erstellt alle Artikel für die Anwendung
     
     func createDemoData() {
         let artikelEntity : NSEntityDescription? = NSEntityDescription.entity(forEntityName: "ArtikelEntity", in: self.appDelegate.coreDataStack.managedObjectContext)
