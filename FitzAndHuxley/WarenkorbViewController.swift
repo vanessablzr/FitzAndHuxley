@@ -24,7 +24,6 @@ class WarenkorbViewController: UIViewController {
     override func viewDidLoad() {
         fetchArtikel()
         calculateTotal()
-        gesamtSumme.text = preisGesamt
         tableView.tableFooterView = UIView()
     }
     
@@ -43,16 +42,6 @@ class WarenkorbViewController: UIViewController {
             fatalError("There was an error fetching the items")
         }
     }
-    
-//    Berechnet den Gesamtwert des Warenkorbs
-//    func calculateTotal(){
-//        var total = 0.0
-//        for currentArtikel in warenkorbArray {
-//            total += currentArtikel.preis * Double(currentArtikel.anzahl!)!
-//        }
-//        let erg = "\(total)€"
-//        preisGesamt = erg
-//    }
     
 //    Überprüfung ob Warenkorb leer ist.
 //    Gibt Fehler falls der Warenkorb leer ist und verhindert den Bestellvorgang
@@ -142,6 +131,7 @@ extension WarenkorbViewController: refreshTotal {
         }
         let erg = "\(total)€"
         preisGesamt = erg
+        gesamtSumme.text = erg
     }
 }
 

@@ -106,7 +106,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
     
     
 // beim Klick auf den Button wird ein neuer Warenkorbartikel mit der angegebenen Anzahl erstellt
-    @IBAction func btnInWarenkorb(_ sender: Any) {
+    @IBAction func btnInWarenkorb(_ sender: UIButton) {
         if (txtfldAnzahl.text?.isEmpty)! {
             selectedAnzahl = "1"
         } else {
