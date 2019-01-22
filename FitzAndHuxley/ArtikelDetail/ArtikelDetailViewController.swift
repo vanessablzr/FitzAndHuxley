@@ -120,4 +120,5 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
     func animateWarenkorbIcon (_ warenkornIcon : UIBarButtonItem){
         
     }
+   
 }
