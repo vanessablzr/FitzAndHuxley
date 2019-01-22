@@ -16,6 +16,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
     var pickerData : [[String]] = [[String]]()
     
     @IBOutlet weak var txtfldAnzahl: UITextField!
+    @IBOutlet weak var warenkorbIcon: UIBarButtonItem!
     
     var appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -115,4 +116,8 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
         createNewWarenkorbEntity()
     }
     
+//    Funktion umer WarenkorbIcon zu animieren
+    func animateWarenkorbIcon (_ warenkornIcon : UIBarButtonItem){
+        
+    }
 }
