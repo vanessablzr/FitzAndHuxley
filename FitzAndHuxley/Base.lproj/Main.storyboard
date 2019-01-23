@@ -930,7 +930,7 @@
                                                 <color key="backgroundColor" red="0.3070384954" green="0.51972472820000004" blue="0.2013895704" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="6Nw-7Z-rq0"/>
-                                                    <constraint firstAttribute="width" constant="238" id="DPW-Ra-ASC"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="DPW-Ra-ASC"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="In den Warenkorb">
@@ -963,7 +963,7 @@
                                             <constraint firstAttribute="trailing" secondItem="AcU-qe-YYm" secondAttribute="trailing" constant="28" id="03a-HZ-AXu"/>
                                             <constraint firstItem="b5Q-oF-Pa0" firstAttribute="top" secondItem="L8o-9f-oaI" secondAttribute="bottom" constant="2" id="0r1-Sx-k6P"/>
                                             <constraint firstItem="QNs-Df-UgD" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" id="19R-4E-8TT"/>
-                                            <constraint firstItem="AcU-qe-YYm" firstAttribute="leading" secondItem="mE0-G3-sdz" secondAttribute="leading" id="3mz-iS-SJb"/>
+                                            <constraint firstItem="AcU-qe-YYm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mE0-G3-sdz" secondAttribute="leading" id="3mz-iS-SJb"/>
                                             <constraint firstItem="YYZ-t3-lXu" firstAttribute="top" secondItem="QNs-Df-UgD" secondAttribute="bottom" constant="1" id="3yN-RJ-XTA"/>
                                             <constraint firstItem="L8o-9f-oaI" firstAttribute="top" secondItem="TAx-rI-CVE" secondAttribute="bottom" constant="48" id="44Y-oz-yKe"/>
                                             <constraint firstAttribute="trailing" secondItem="b5Q-oF-Pa0" secondAttribute="trailing" constant="42" id="4dg-vx-09K"/>
@@ -976,12 +976,12 @@
                                             <constraint firstItem="L8o-9f-oaI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="20" symbolic="YES" id="Ci6-O0-Blg"/>
                                             <constraint firstItem="bVi-1j-MWU" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="40" id="CnA-O6-Brw"/>
                                             <constraint firstItem="AcU-qe-YYm" firstAttribute="top" secondItem="mE0-G3-sdz" secondAttribute="bottom" constant="4" id="Cp3-t1-zOo"/>
-                                            <constraint firstItem="YYZ-t3-lXu" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="40" id="KEl-pK-TbD"/>
+                                            <constraint firstItem="YYZ-t3-lXu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CVo-3o-Kyw" secondAttribute="leading" symbolic="YES" id="KEl-pK-TbD"/>
                                             <constraint firstItem="zMd-Tq-Bdg" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="15" id="Lyf-ae-Ux8"/>
                                             <constraint firstAttribute="trailing" secondItem="5Gu-mM-0qO" secondAttribute="trailing" constant="28" id="MDh-bY-JIO"/>
                                             <constraint firstItem="oLx-2C-ypV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bVi-1j-MWU" secondAttribute="leading" id="NhO-37-NA3"/>
                                             <constraint firstAttribute="trailing" secondItem="TAx-rI-CVE" secondAttribute="trailing" id="QJH-H9-zLl"/>
-                                            <constraint firstItem="AcU-qe-YYm" firstAttribute="leading" secondItem="5Gu-mM-0qO" secondAttribute="leading" id="RgL-MI-wnl"/>
+                                            <constraint firstItem="AcU-qe-YYm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Gu-mM-0qO" secondAttribute="leading" id="RgL-MI-wnl"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oLx-2C-ypV" secondAttribute="trailing" constant="20" symbolic="YES" id="SeA-hK-9UF"/>
                                             <constraint firstItem="b5Q-oF-Pa0" firstAttribute="leading" secondItem="h31-cE-cOm" secondAttribute="trailing" constant="108" id="TV7-L4-rOL"/>
                                             <constraint firstItem="bVi-1j-MWU" firstAttribute="top" secondItem="TAx-rI-CVE" secondAttribute="bottom" constant="23" id="Ufe-vF-pKQ"/>
@@ -1034,8 +1034,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="1Vx-BK-A6C">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="AWi-dD-yQF"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="vNh-zg-KnE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="vNh-zg-KnE" customClass="WarenkornBarButtonItem" customModule="FitzAndHuxley" customModuleProvider="target">
                             <connections>
+                                <action selector="warenkorbButton:" destination="NAT-L7-w3o" id="fFG-kJ-Myc"/>
                                 <segue destination="buv-au-lmP" kind="show" id="m8K-hD-YBA"/>
                             </connections>
                         </barButtonItem>
@@ -1054,6 +1055,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj1-in-GN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NAT-L7-w3o" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4312.5" y="718.30985915492954"/>
         </scene>

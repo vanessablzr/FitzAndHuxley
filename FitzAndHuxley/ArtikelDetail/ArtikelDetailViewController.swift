@@ -114,11 +114,26 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
             selectedAnzahl = txtfldAnzahl.text!
         }
         createNewWarenkorbEntity()
+        shortAlert()
     }
     
-//    Funktion umer WarenkorbIcon zu animieren
-    func animateWarenkorbIcon (_ warenkornIcon : UIBarButtonItem){
+//    Feedback, dass Artikel zum Warenkorb hinzugefügt wurde
+    func shortAlert() {
+        let alert = UIAlertController(title:"" , message: "Artikel wurde zu deinem Warenkorb hinzugefügt", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
         
+//        let imgTitle = UIImage(named:"ShoppingBagSuccess.png")
+//        let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+//        imgViewTitle.image = imgTitle
+//        alert.view.addSubview(imgViewTitle)
+//
+        
+        // Änderung der Anzeigezeit
+        let when = DispatchTime.now() + 1
+        DispatchQueue.main.asyncAfter(deadline: when){
+            alert.dismiss(animated: true, completion: nil)
+        }
     }
+    
    
 }
