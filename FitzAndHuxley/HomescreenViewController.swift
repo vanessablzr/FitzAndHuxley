@@ -63,7 +63,7 @@ class HomescreenViewController: UIViewController {
             weekender1.farbe = "schwarz"
             weekender1.groesse = "small"
             weekender1.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
-            weekender1.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, schwarz gefärbtem Glattleder"
+            weekender1.material = "Gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem Glattleder"
             weekender1.inWarenkorb = false
             weekender1.id = "weekender"
             
@@ -74,7 +74,7 @@ class HomescreenViewController: UIViewController {
             weekender2.farbe = "braun"
             weekender2.groesse = "small"
             weekender2.eigenschaften = "Weekender Bag in minimalistischem Design mit vier geräumigen Taschen im Inneren"
-            weekender2.material = "Schwarzer, gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem, leicht geölten Glattleder"
+            weekender2.material = "Gewachster Canvas-Stoff (wasserabweisend, Lotuseffekt) - Applikationen aus echtem Glattleder"
             weekender2.inWarenkorb = false
             weekender2.id = "weekender"
 

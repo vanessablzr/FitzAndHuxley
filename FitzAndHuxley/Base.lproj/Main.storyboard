@@ -808,7 +808,6 @@
                             <outlet property="delegate" destination="akE-oB-NQZ" id="tPR-UW-KiO"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="MAd-yd-BJE"/>
                     <navigationItem key="navigationItem" title="Title" id="7KR-3X-XqB">
                         <barButtonItem key="backBarButtonItem" title="Zurück" id="eix-ko-w8y"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="white - Icon - Shopping bag - 24px" id="jrD-N7-KyV">
@@ -962,6 +961,7 @@
                                             <constraint firstItem="zMd-Tq-Bdg" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="15" id="Lyf-ae-Ux8"/>
                                             <constraint firstAttribute="trailing" secondItem="5Gu-mM-0qO" secondAttribute="trailing" constant="28" id="MDh-bY-JIO"/>
                                             <constraint firstItem="oLx-2C-ypV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bVi-1j-MWU" secondAttribute="leading" id="NhO-37-NA3"/>
+                                            <constraint firstItem="5Gu-mM-0qO" firstAttribute="leading" secondItem="CVo-3o-Kyw" secondAttribute="leading" constant="15" id="PUf-H2-ZGE"/>
                                             <constraint firstAttribute="trailing" secondItem="TAx-rI-CVE" secondAttribute="trailing" id="QJH-H9-zLl"/>
                                             <constraint firstItem="AcU-qe-YYm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Gu-mM-0qO" secondAttribute="leading" id="RgL-MI-wnl"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oLx-2C-ypV" secondAttribute="trailing" constant="20" symbolic="YES" id="SeA-hK-9UF"/>
@@ -1766,7 +1766,6 @@
                             <constraint firstItem="ip8-8H-vx2" firstAttribute="trailing" secondItem="Jx1-GW-qwB" secondAttribute="trailing" constant="28" id="Dck-Nq-Yud"/>
                             <constraint firstItem="ip8-8H-vx2" firstAttribute="trailing" secondItem="ZCL-Bg-Eim" secondAttribute="trailing" constant="230" id="E7t-Bf-XEz"/>
                             <constraint firstItem="1OV-Ac-za6" firstAttribute="top" secondItem="ZCL-Bg-Eim" secondAttribute="bottom" constant="1" id="GNZ-Iv-yr0"/>
-                            <constraint firstItem="fdl-7p-oUk" firstAttribute="top" secondItem="Jx1-GW-qwB" secondAttribute="bottom" constant="107" id="LWA-Dz-S2q"/>
                             <constraint firstItem="MD5-se-yRG" firstAttribute="top" secondItem="fdl-7p-oUk" secondAttribute="bottom" constant="3" id="Lxf-ab-NLq"/>
                             <constraint firstItem="MD5-se-yRG" firstAttribute="top" secondItem="fdl-7p-oUk" secondAttribute="bottom" constant="3" id="Mei-kb-8rJ"/>
                             <constraint firstItem="Jx1-GW-qwB" firstAttribute="top" secondItem="1OV-Ac-za6" secondAttribute="bottom" constant="21" id="MwR-wV-sLm"/>
