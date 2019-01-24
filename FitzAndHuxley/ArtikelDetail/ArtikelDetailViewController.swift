@@ -124,7 +124,7 @@ class ArtikelDetailViewController: UIViewController, UITextFieldDelegate, UIPick
         self.present(alert, animated: true, completion: nil)
 
         // Änderung der Anzeigezeit
-        let when = DispatchTime.now() + 1.5
+        let when = DispatchTime.now() + 1.0
         DispatchQueue.main.asyncAfter(deadline: when){
             alert.dismiss(animated: true, completion: nil)
         }
